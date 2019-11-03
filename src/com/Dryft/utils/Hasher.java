@@ -1,4 +1,4 @@
-package com.Dryft;
+package com.Dryft.utils;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -7,8 +7,8 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 
-class Hasher {
-    static String hashPasswordWithSalt(String password, String salt) {
+public class Hasher {
+    public static String hashPasswordWithSalt(String password, String salt) {
         byte[] saltBytes = toByte(salt);
         KeySpec spec = new PBEKeySpec(password.toCharArray(), saltBytes, 65536, 256);
         SecretKeyFactory skf = null;
@@ -27,7 +27,7 @@ class Hasher {
         return toHex(hash);
     }
 
-    static String[] hashPassword(String password) {
+    public static String[] hashPassword(String password) {
         byte[] salt = generateSalt();
         String saltHex = toHex(salt);
         String passwordHash = hashPasswordWithSalt(password, saltHex);
