@@ -20,7 +20,7 @@ public class DBConn {
         ensureDriverExists();
         try {
             if (conn == null || conn.isClosed()) {
-                conn = DriverManager.getConnection("jdbc:sqlite:dryft.sqlite");
+                conn = DriverManager.getConnection("jdbc:sqlite:dryft.sqlite3");
             }
         } catch (SQLException e) {
             System.err.println("Error in connecting to DB");
