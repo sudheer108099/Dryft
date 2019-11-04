@@ -15,7 +15,7 @@ public class PopulateDB {
                 "fullname TEXT," +
                 "password TEXT," +
                 "salt TEXT," +
-                "sex BOOLEAN," +
+                "sex CHAR(1)," +
                 "balance INT" +
                 ");";
     }
