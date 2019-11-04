@@ -3,6 +3,7 @@ package tools;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class PopulateDB {
     private static void makeTables(Connection conn) {
@@ -18,6 +19,13 @@ public class PopulateDB {
                 "sex CHAR(1)," +
                 "balance INT" +
                 ");";
+        Statement stmt = null;
+        try {
+            stmt = conn.createStatement();
+            stmt.execute(createUserTable);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
