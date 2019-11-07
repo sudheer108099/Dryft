@@ -76,9 +76,6 @@ public class SignIn extends JFrame {
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new SignUp().setVisible(true);
-                dispose();
-
-
             }
         });
         btnNewButton.setBounds(450, 336, 89, 23);
