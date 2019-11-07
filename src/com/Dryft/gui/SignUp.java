@@ -32,7 +32,7 @@ public class SignUp extends JFrame {
         lblSignUpHere.setBounds(212, 11, 223, 33);
         contentPane.add(lblSignUpHere);
 
-        JLabel lblFullName = new JLabel("FULL NAME");
+        JLabel lblFullName = new JLabel("FULL NAME *");
         lblFullName.setFont(new Font("Dialog", Font.PLAIN, 13));
         lblFullName.setBounds(77, 74, 107, 14);
         contentPane.add(lblFullName);
@@ -159,7 +159,7 @@ public class SignUp extends JFrame {
         btnClose.setForeground(Color.RED);
         btnClose.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                dispose();
             }
         });
         btnClose.setBounds(472, 357, 89, 33);
