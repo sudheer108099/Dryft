@@ -43,7 +43,7 @@ public class UserDAO {
 
     }
 
-    public static User retrieveUserDetails(String email, String password, String salt) throws SQLException {
+    public static User retrieveUserDetails(String email, String password) throws SQLException {
         Connection conn = DBConn.getConn();
         validateCredentials(email, password, conn);
         String query = "Select fullname,sex,balance from users where email = (?)";
