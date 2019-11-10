@@ -1,41 +1,18 @@
 package com.Dryft.models;
 
 class User {
-    private String fullname;
-    private String email;
+    private final String fullname;
+    private final String email;
+    private final char sex;
     private String password;
-    private String salt;
-    private char sex;
     private int balance;
 
-    public User(String fullname, String email, String password, String salt, char sex, int balance) {
-        setFullname(fullname);
-        setEmail(email);
-        setPassword(password);
-        setSalt(salt);
-        setSex(sex);
-        setBalance(balance);
-        writeToDB();
-    }
-
-    public void setFullname(String fullname) {
+    public User(String fullname, String email, String password, char sex, int balance) {
         this.fullname = fullname;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
-
-    public void setSex(char sex) {
         this.sex = sex;
+        this.balance = balance;
     }
 
     public void setBalance(int balance) {
@@ -54,10 +31,6 @@ class User {
         return password;
     }
 
-    public String getSalt() {
-        return salt;
-    }
-
     public char getSex() {
         return sex;
     }
@@ -66,7 +39,4 @@ class User {
         return balance;
     }
 
-    private void writeToDB() {
-        // to be coded
-    }
 }
