@@ -3,6 +3,7 @@ package com.Dryft.DAOs;
 import java.sql.*;
 import com.Dryft.models.User;
 import com.Dryft.utils.DBConn;
+import com.Dryft.utils.Hasher;
 import com.Dryft.exceptions.UserSideException;
 
 public class UserDAO {
@@ -28,15 +29,16 @@ public class UserDAO {
     }
 
     private static void validateCredentials(String email, String password, DBConn conn) throws SQLException {
-        String query = "Select email,password from users where email = (?)";
+        String query = "Select email,password,salt from users where email = (?)";
         PreparedStatement st = conn.prepareStatement(query);
         st.setString(1, user.getEmail());
         ResultSet result = st.executeQuery();
-        if (result.next())
-            if (!(result.getString("email") == email && result.getString("password") == password))
+        if (result.next()) {
+            String hashedPassword = hashPasswordWithSalt(password, result.getString("salt"));
+            if (!(result.getString("email") == email && result.getString("password") == hashedPassword))
                 throw new UserSideException(UserSideException.ErrorCode.InvalidCredentials);
-            else
-                throw new UserSideException(UserSideException.ErrorCode.UserNotFound);
+        } else
+            throw new UserSideException(UserSideException.ErrorCode.UserNotFound);
 
     }
 
