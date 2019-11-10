@@ -7,7 +7,7 @@ import com.Dryft.exceptions.UserSideException;
 
 public class UserDAO {
 
-    public static void createUser(User user) throws Exception {
+    public static void createUser(User user) throws SQLException {
         conn = DBConn.getConn();
         checkUserAlreadyExists(user, conn);
         String query = "Insert into users values (?,?,?,?,?,?)";
@@ -18,7 +18,7 @@ public class UserDAO {
         DBConn.closeConn();
     }
 
-    private static void checkUserAlreadyExists(User user, DBconn conn) throws Exception {
+    private static void checkUserAlreadyExists(User user, DBconn conn) throws SQLException {
         String query = "Select email from users where email = (?)";
         PreparedStatement st = conn.prepareStatement(query);
         st.setString(1, user.getEmail());
@@ -27,7 +27,7 @@ public class UserDAO {
             throw new UserSideException(UserSideException.ErrorCode.EmailAlreadyExists);
     }
 
-    private static void validateCredentials(String email, String password, DBConn conn) throws Exception {
+    private static void validateCredentials(String email, String password, DBConn conn) throws SQLException {
         String query = "Select email,password from users where email = (?)";
         PreparedStatement st = conn.prepareStatement(query);
         st.setString(1, user.getEmail());
@@ -40,7 +40,7 @@ public class UserDAO {
 
     }
 
-    public static User retrieveUserDetails(String email, String password, String salt) throws Exception {
+    public static User retrieveUserDetails(String email, String password, String salt) throws SQLException {
         conn = DBConn.getConn();
         validateCredentials(email, password, conn);
         String query = "Select fullname,sex,balance from users where email = (?)";
