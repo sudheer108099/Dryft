@@ -39,13 +39,14 @@ public class PopulateDB {
         String createDriverTable = "CREATE TABLE drivers (" +
                 "id INT PRIMARY KEY," +
                 "name TEXT," +
-                "carNumber INT," +
+                "carNumber TEXT," +
                 "sex CHAR(1)," +
                 "location TEXT," +
                 "rating REAL," +
                 "reviews INT," +
-                "FOREIGN KEY(carNumber) REFERENCES cars(licenseNumber)," + 
-                "FOREIGN KEY(location) REFERENCES locations(name)" +             
+                "onRoad BOOLEAN," +
+                "FOREIGN KEY(carNumber) REFERENCES cars(licenseNumber)," +
+                "FOREIGN KEY(location) REFERENCES locations(name)" +
                 ");";
         Statement stmt = null;
         try {
@@ -108,7 +109,7 @@ public class PopulateDB {
                 "FOREIGN KEY(userEmail) REFERENCES users(email)," +
                 "FOREIGN KEY(driver) REFERENCES drivers(id)," +
                 "FOREIGN KEY(source) REFERENCES locations(name)," +
-                "FOREIGN KEY(destination) REFERENCES users(name)," +
+                "FOREIGN KEY(destination) REFERENCES locations(name)" +
                 ");";
         Statement stmt = null;
         try {
