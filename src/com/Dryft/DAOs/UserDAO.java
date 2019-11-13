@@ -39,7 +39,7 @@ public class UserDAO {
         st.setString(4, passCredentials[1]);
         st.setString(5, String.valueOf(user.getSex()));
         st.setInt(6, user.getBalance());
-        st.executeQuery();
+        st.executeUpdate();
         DBConn.closeConn();
     }
 
@@ -48,8 +48,9 @@ public class UserDAO {
         PreparedStatement st = conn.prepareStatement(query);
         st.setString(1, user.getEmail());
         ResultSet result = st.executeQuery();
-        if (result.next())
+        if (result.next()) {
             throw new UserSideException(UserSideException.ErrorCode.EmailAlreadyExists);
+        }
     }
 
     private static void validateCredentials(String email, String password, Connection conn) throws SQLException {
@@ -59,10 +60,12 @@ public class UserDAO {
         ResultSet result = st.executeQuery();
         if (result.next()) {
             String hashedPassword = Hasher.hashPasswordWithSalt(password, result.getString("salt"));
-            if (!(result.getString("email").equals(email) && result.getString("password").equals(hashedPassword)))
+            if (!(result.getString("password").equals(hashedPassword))) {
                 throw new UserSideException(UserSideException.ErrorCode.InvalidCredentials);
-        } else
+            }
+        } else {
             throw new UserSideException(UserSideException.ErrorCode.UserNotFound);
+        }
     }
 
     public static User retrieveUserDetails(String email, String password) throws SQLException {

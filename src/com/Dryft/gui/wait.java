@@ -1,4 +1,7 @@
 package com.Dryft.gui;
+
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -8,13 +11,11 @@ import java.util.logging.Logger;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author T Sudheer Kumar
  */
 public class wait extends javax.swing.JFrame {
-    
 
     /**
      * Creates new form wait
@@ -66,11 +67,26 @@ public class wait extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    int secondsPassed = 0;
+    Timer timer = new Timer();
+    TimerTask task = new TimerTask() {
+        public void run() {
+            secondsPassed++;
+
+            if (secondsPassed == 10) {
+                //JOptionPane.showOptionDialog(rootPane, this, null, WIDTH, WIDTH, null, options, rootPane);
+
+                timer.cancel();
+                new timerPage().setVisible(true);
+            }
+        }
+    };
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])  {
-        
+    public static void main(String args[]) {
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -94,7 +110,8 @@ public class wait extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        timerPage t = new timerPage();
+        t.start();/* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 wait w = new wait();

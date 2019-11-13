@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.Dryft.gui;
+
 import com.Dryft.DAOs.LocationDAO;
 import com.Dryft.DAOs.DriverDAO;
 import com.Dryft.models.Car.CarType;
@@ -15,7 +16,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 import javax.swing.JOptionPane;
 
 /**
@@ -23,11 +23,13 @@ import javax.swing.JOptionPane;
  * @author T Sudheer Kumar
  */
 public class Home extends javax.swing.JFrame {
+
     private final User user;
     private String name = "username";
     private int balance = 200;
-    
+
     private List<Location> locations;
+
     /**
      * Creates new form Home
      */
@@ -43,7 +45,7 @@ public class Home extends javax.swing.JFrame {
         user = null;
         initComponents();
     }
-    
+
     public Home(User user) {
         try {
             this.locations = LocationDAO.getAllLocations();
@@ -255,15 +257,21 @@ public class Home extends javax.swing.JFrame {
         String carType = (String) jComboBox3.getSelectedItem();
         Location origin = this.locations.stream().filter(x -> x.getName().equals(pickUp)).findFirst().get();
         Location dest = this.locations.stream().filter(x -> x.getName().equals(destination)).findFirst().get();
-        CarType type = CarType.valueOf(carType);
+        CarType type = CarType.valueOf(carType.toUpperCase());
+        Driver driver = null;
         try {
-            Driver driver = DriverDAO.getBestDriver(origin, type);
+            driver = DriverDAO.getBestDriver(origin, type);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Database could not be connected. Inconvenience caused is regretted.");
+            ex.printStackTrace();
+            return;
         } catch (IllegalArgumentException ex) {
-           // Show error for driver not found
+            JOptionPane.showMessageDialog(null, "No driver available at the moment.");
+            return;
         }
         JOptionPane.showMessageDialog(null, "Pickup:-" + pickUp + "\nDestination:-" + destination + "\nCar Type:-" + carType);
+        new DriverPage(user, driver, origin, dest).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed

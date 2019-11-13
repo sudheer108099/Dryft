@@ -1,6 +1,7 @@
 package com.Dryft.models;
 
 public class Location {
+
     private final String name;
     private final int x;
     private final int y;

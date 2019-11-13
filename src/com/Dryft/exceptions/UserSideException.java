@@ -3,13 +3,13 @@ package com.Dryft.exceptions;
 /**
  * Exception for user related things
  * <p>
- * This class provides an enum of error codes that must be given in the constructor.
- * These codes specify the exact cause for the exception.
+ * This class provides an enum of error codes that must be given in the
+ * constructor. These codes specify the exact cause for the exception.
  * </p>
  */
 public class UserSideException extends RuntimeException {
-    private final ErrorCode code;
 
+    private final ErrorCode code;
 
     public UserSideException(ErrorCode code) {
         super();
@@ -33,12 +33,12 @@ public class UserSideException extends RuntimeException {
     /**
      * This enum is the codes for the errors
      * <p>
-     *     <ul>
-     *         <li>UsernameAlreadyInUse</li>
-     *         <li>UsernameNotFound</li>
-     *         <li>IncorrectPassword</li>
-     *         <li>BalanceNotEnough</li>
-     *     </ul>
+     * <ul>
+     * <li>UsernameAlreadyInUse</li>
+     * <li>UsernameNotFound</li>
+     * <li>IncorrectPassword</li>
+     * <li>BalanceNotEnough</li>
+     * </ul>
      * </p>
      */
     public enum ErrorCode {

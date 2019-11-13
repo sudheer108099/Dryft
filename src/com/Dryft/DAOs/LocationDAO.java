@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LocationDAO {
+
     public static Location getLocation(String name) throws SQLException {
         Connection conn = DBConn.getConn();
         PreparedStatement st = conn.prepareStatement("SELECT * FROM locations WHERE name = (?);");

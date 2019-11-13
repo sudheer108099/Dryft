@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.Dryft.gui;
 
 import com.Dryft.models.Driver;
+import com.Dryft.models.Location;
+import com.Dryft.models.Ride;
+import com.Dryft.models.User;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,20 +16,41 @@ import javax.swing.JOptionPane;
  * @author T Sudheer Kumar
  */
 public class DriverPage extends javax.swing.JFrame {
+
+    User user;
     String name;
     String licenseNumber;
-    
+    String carModel;
+    double rating;
+    int duration;
+    int cost;
+
     /**
      * Creates new form DriverPage
      */
     public DriverPage() {
+        user = null;
+        name = "dlsg";
+        licenseNumber = "ABLCNFAE2";
+        carModel = "Tesla 3";
+        rating = 4.5;
+        duration = 50;
+        cost = 200;
         initComponents();
     }
 
-    public DriverPage(Driver driver) {
-        
+    public DriverPage(User user, Driver driver, Location source, Location dest) {
+        this.user = user;
+        name = driver.getName();
+        licenseNumber = driver.getCar().getLicenseNumber();
+        carModel = driver.getCar().getModel();
+        rating = driver.getRating();
+        int dist = Ride.calculateDistance(source, dest);
+        duration = Ride.calculateDuration(dist, driver);
+        cost = Ride.calculateCost(dist, driver);
+        initComponents();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -91,23 +114,23 @@ public class DriverPage extends javax.swing.JFrame {
 
         jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField1.setText("Kushagra");
+        jTextField1.setText(name);
 
         jTextField2.setEditable(false);
         jTextField2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField2.setText("Audi Q8");
+        jTextField2.setText(licenseNumber + " | " + carModel);
 
         jTextField3.setEditable(false);
         jTextField3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField3.setText("5 minutes");
+        jTextField3.setText("" + duration);
 
         jTextField4.setEditable(false);
         jTextField4.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField4.setText("Taalis' Lakh");
+        jTextField4.setText("" + cost);
 
         jTextField5.setEditable(false);
         jTextField5.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField5.setText("-4.5");
+        jTextField5.setText("" + rating);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,18 +201,17 @@ public class DriverPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-int cancel=JOptionPane.showConfirmDialog(null,"Are you Sure?"); 
-if(cancel==0)
-{
-    JOptionPane.showMessageDialog(null, "Your cab booking was cancelled successfully");
-    new Home().setVisible(true);
-    this.dispose();
-}// TODO add your handling code here:
+        int cancel = JOptionPane.showConfirmDialog(null, "Are you Sure?");
+        if (cancel == 0) {
+            JOptionPane.showMessageDialog(null, "Your cab booking was cancelled successfully");
+            new Home(user).setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-this.dispose();// TODO add your handling code here:
+        new timerPage().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

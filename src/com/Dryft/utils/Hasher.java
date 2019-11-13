@@ -8,6 +8,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 
 public class Hasher {
+
     public static String hashPasswordWithSalt(String password, String salt) {
         byte[] saltBytes = toByte(salt);
         KeySpec spec = new PBEKeySpec(password.toCharArray(), saltBytes, 65536, 256);

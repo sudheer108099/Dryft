@@ -47,7 +47,6 @@ public class SignUp extends JFrame {
 //        lblUserName.setFont(new Font("Dialog", Font.PLAIN, 13));
 //        lblUserName.setBounds(77, 120, 107, 14);
 //        contentPane.add(lblUserName);
-
         JLabel lblEmailId = new JLabel("EMAIL ID *");
         lblEmailId.setFont(new Font("Dialog", Font.PLAIN, 13));
         lblEmailId.setBounds(77, 166, 107, 14);
@@ -120,15 +119,16 @@ public class SignUp extends JFrame {
                 String password = String.valueOf(passwordField.getPassword());
                 String confirmPassword = String.valueOf(passwordField_1.getPassword());
                 String gender = "F";
-                if (maleButton.isSelected() == true)
+                if (maleButton.isSelected() == true) {
                     gender = "M";
-                if (!password.contentEquals(confirmPassword) || password.length() == 0)
+                }
+                if (!password.contentEquals(confirmPassword) || password.length() == 0) {
                     JOptionPane.showMessageDialog(null, "Password confirmation failed. Try again.");
-                else if (email_id.length() == 0)
+                } else if (email_id.length() == 0) {
                     JOptionPane.showMessageDialog(null, "Please enter the email.");
-                else if (maleButton.isSelected() == false && femaleButton.isSelected() == false)
+                } else if (maleButton.isSelected() == false && femaleButton.isSelected() == false) {
                     JOptionPane.showMessageDialog(null, "Please select a gender");
-                else {
+                } else {
                     User user = new User(name, email_id, password, gender.charAt(0), 0);
                     try {
                         UserDAO.createUser(user);
@@ -166,7 +166,6 @@ public class SignUp extends JFrame {
                 passwordField.setText("");
                 passwordField_1.setText("");
                 defaultButton.setSelected(true);
-
 
             }
         });

@@ -1,6 +1,7 @@
 package com.Dryft.models;
 
 public class Driver {
+
     private final int id;
     private final String name;
     private final Car car;
@@ -33,7 +34,9 @@ public class Driver {
         this.onRoad = onRoad;
     }
 
-    public Location getLocation() { return location; }
+    public Location getLocation() {
+        return location;
+    }
 
     public void setLocation(Location location) {
         this.location = location;
@@ -47,9 +50,13 @@ public class Driver {
         return car;
     }
 
-    public char getSex() { return sex; }
+    public char getSex() {
+        return sex;
+    }
 
-    public double getRating() { return rating; }
+    public double getRating() {
+        return rating;
+    }
 
     public void updateRating(int review) {
         double total_rating = ((this.rating * this.reviews) + review);

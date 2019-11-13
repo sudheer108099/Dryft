@@ -14,6 +14,10 @@ import java.util.logging.Logger;
 
 public class SignIn extends JFrame {
 
+    void quit() {
+        this.dispose();
+    }
+
     private JPanel contentPane;
     private JTextField textField;
     private JPasswordField passwordField;
@@ -84,7 +88,7 @@ public class SignIn extends JFrame {
                 }
                 if (message == null) {
                     new Home(user).setVisible(true);
-                    dispose();
+                    quit();
                 } else {
                     JOptionPane.showMessageDialog(null, message);
                 }

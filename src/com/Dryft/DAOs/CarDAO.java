@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CarDAO {
+
     public static Car getCar(String licenseNumber) throws SQLException {
         Connection conn = DBConn.getConn();
         PreparedStatement st = conn.prepareStatement("SELECT * FROM cars WHERE licenseNumber = (?);");

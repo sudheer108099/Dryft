@@ -3,6 +3,7 @@ package com.Dryft.models;
 import java.time.LocalDateTime;
 
 public class Ride {
+
     private final Location source;
     private final Location destination;
     private final Driver driver;

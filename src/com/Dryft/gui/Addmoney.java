@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.Dryft.gui;
 
 import com.Dryft.models.User;
@@ -14,8 +13,10 @@ import javax.swing.JOptionPane;
  * @author T Sudheer Kumar
  */
 public class addMoney extends javax.swing.JFrame {
+
     private final User user;
     private int balance = 200;
+
     /**
      * Creates new form addMoney
      */
@@ -29,7 +30,7 @@ public class addMoney extends javax.swing.JFrame {
         balance = user.getBalance();
         initComponents();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -136,13 +137,13 @@ public class addMoney extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int moneyToAdd = Integer.parseInt(jTextField2.getText());
-        if(moneyToAdd >= 300 - balance) {
-            JOptionPane.showMessageDialog(null, "An amount of Rs " + moneyToAdd + " has been successfully added.." );
+        if (moneyToAdd >= 300 - balance) {
+            JOptionPane.showMessageDialog(null, "An amount of Rs " + moneyToAdd + " has been successfully added..");
             // UserDAO.addMoney
             this.dispose();
             new Home(this.user).setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null,"Please maintain an account balance of more than 300 rupees.");
+            JOptionPane.showMessageDialog(null, "Please maintain an account balance of more than 300 rupees.");
             jTextField2.setText("");
         }
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DriverDAO {
+
     public static Driver getDriver(int id) throws SQLException {
         Connection conn = DBConn.getConn();
         PreparedStatement st = conn.prepareStatement("SELECT * FROM drivers WHERE id = (?);");
@@ -26,25 +27,33 @@ public class DriverDAO {
             throw new IllegalArgumentException("Driver not found");
         }
     }
-
-    public static Driver getBestDriver(char userSex, Location origin, Car.CarType type) throws SQLException {
+ 
+    public static Driver getBestDriver(Location origin, Car.CarType type) throws SQLException {
         Connection conn = DBConn.getConn();
-        PreparedStatement st = conn.prepareStatement("SELECT * FROM "
+        PreparedStatement st = conn.prepareStatement(
+                "SELECT * FROM "
                 + "(drivers INNER JOIN cars c ON drivers.carNumber = c.licenseNumber INNER JOIN locations l on drivers.location = l.name) "
-                + "WHERE sex = (?) AND CarType = (?) AND onRoad = (?) "
-                + "ORDER BY (abs((?) - x) + abs((?) - y)), rating DESC;");
-        st.setString(1, String.valueOf(userSex));
-        st.setString(2, type.name());
-        st.setBoolean(3,true);
-        st.setInt(4, origin.getX());
-        st.setInt(5, origin.getY());
+                + "WHERE CarType = (?) AND onRoad = (?) "
+                + "ORDER BY (abs((?) - x) + abs((?) - y)), rating DESC;"
+        );
+        st.setString(1, type.name());
+        st.setBoolean(2, false);
+        st.setInt(3, origin.getX());
+        st.setInt(4, origin.getY());
         var result = st.executeQuery();
         if (result.next()) {
+            Driver d = new Driver(
+                    result.getInt("id"),
+                    result.getString("name"),
+                    CarDAO.getCar(result.getString("CarNumber")),
+                    LocationDAO.getLocation(result.getString("location")),
+                    result.getString("sex").charAt(0),
+                    result.getDouble("rating"),
+                    result.getInt("reviews"),
+                    result.getBoolean("onRoad")
+            );
             DBConn.closeConn();
-            return new Driver(result.getInt("id"), result.getString("name"),
-                    CarDAO.getCar(result.getString("CarNumber")), LocationDAO.getLocation(result.getString("location")),
-                    result.getString("sex").charAt(0), result.getDouble("rating"), result.getInt("reviews"),
-                    result.getBoolean("onRoad"));
+            return d;
         } else {
             DBConn.closeConn();
             throw new IllegalArgumentException("Driver not found");

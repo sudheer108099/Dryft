@@ -1,6 +1,7 @@
 package com.Dryft.models;
 
 public class Car {
+
     private final String model;
     private final int costPerKm;
     private final String licenseNumber;

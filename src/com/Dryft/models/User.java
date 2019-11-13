@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.lang.Math;
 
 public class User {
+
     private final String fullname;
     private final String email;
     private final char sex;

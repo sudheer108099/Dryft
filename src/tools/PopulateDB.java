@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class PopulateDB {
+
     private static void makeTables(Connection conn) {
         makeUserTable(conn);
         makeDriverTable(conn);
@@ -16,14 +17,14 @@ public class PopulateDB {
 
     private static void makeUserTable(Connection conn) {
         String deleteExistingTable = "DROP TABLE IF EXISTS users;";
-        String createUserTable = "CREATE TABLE users (" +
-                "email TEXT PRIMARY KEY," +
-                "fullname TEXT," +
-                "password TEXT," +
-                "salt TEXT," +
-                "sex CHAR(1)," +
-                "balance INT" +
-                ");";
+        String createUserTable = "CREATE TABLE users ("
+                + "email TEXT PRIMARY KEY,"
+                + "fullname TEXT,"
+                + "password TEXT,"
+                + "salt TEXT,"
+                + "sex CHAR(1),"
+                + "balance INT"
+                + ");";
         Statement stmt = null;
         try {
             stmt = conn.createStatement();
@@ -36,18 +37,18 @@ public class PopulateDB {
 
     private static void makeDriverTable(Connection conn) {
         String deleteExistingTable = "DROP TABLE IF EXISTS drivers;";
-        String createDriverTable = "CREATE TABLE drivers (" +
-                "id INT PRIMARY KEY," +
-                "name TEXT," +
-                "carNumber TEXT," +
-                "sex CHAR(1)," +
-                "location TEXT," +
-                "rating REAL," +
-                "reviews INT," +
-                "onRoad BOOLEAN," +
-                "FOREIGN KEY(carNumber) REFERENCES cars(licenseNumber)," +
-                "FOREIGN KEY(location) REFERENCES locations(name)" +
-                ");";
+        String createDriverTable = "CREATE TABLE drivers ("
+                + "id INT PRIMARY KEY,"
+                + "name TEXT,"
+                + "carNumber TEXT,"
+                + "sex CHAR(1),"
+                + "location TEXT,"
+                + "rating REAL,"
+                + "reviews INT,"
+                + "onRoad BOOLEAN,"
+                + "FOREIGN KEY(carNumber) REFERENCES cars(licenseNumber),"
+                + "FOREIGN KEY(location) REFERENCES locations(name)"
+                + ");";
         Statement stmt = null;
         try {
             stmt = conn.createStatement();
@@ -60,13 +61,13 @@ public class PopulateDB {
 
     private static void makeCarTable(Connection conn) {
         String deleteExistingTable = "DROP TABLE IF EXISTS cars;";
-        String createCarTable = "CREATE TABLE cars (" +
-                "licenseNumber TEXT PRIMARY KEY," +
-                "model TEXT," +
-                "costPerKm INT," +
-                "CarType TEXT," +
-                "speed INT" +
-                ");";
+        String createCarTable = "CREATE TABLE cars ("
+                + "licenseNumber TEXT PRIMARY KEY,"
+                + "model TEXT,"
+                + "costPerKm INT,"
+                + "CarType TEXT,"
+                + "speed INT"
+                + ");";
         Statement stmt = null;
         try {
             stmt = conn.createStatement();
@@ -79,11 +80,11 @@ public class PopulateDB {
 
     private static void makeLocationTable(Connection conn) {
         String deleteExistingTable = "DROP TABLE IF EXISTS locations;";
-        String createLocationTable = "CREATE TABLE locations (" +
-                "name TEXT PRIMARY KEY," +
-                "x INT," +
-                "y INT" +
-                ");";
+        String createLocationTable = "CREATE TABLE locations ("
+                + "name TEXT PRIMARY KEY,"
+                + "x INT,"
+                + "y INT"
+                + ");";
         Statement stmt = null;
         try {
             stmt = conn.createStatement();
