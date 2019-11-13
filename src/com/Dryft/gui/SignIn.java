@@ -1,10 +1,16 @@
 package com.Dryft.gui;
 
+import com.Dryft.DAOs.UserDAO;
+import com.Dryft.exceptions.UserSideException;
+import com.Dryft.models.User;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class SignIn extends JFrame {
 
@@ -45,14 +51,43 @@ public class SignIn extends JFrame {
         contentPane.add(textField);
         textField.setColumns(10);
 
-        JButton btnSignIn = new JButton(" SIGN IN");
+        JButton btnSignIn = new JButton("SIGN IN");
         btnSignIn.setFont(new Font("Tahoma", Font.PLAIN, 14));
         btnSignIn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String username = textField.getText();
                 String password = String.valueOf(passwordField.getPassword());
-                //Write your SQL code here
-                JOptionPane.showConfirmDialog(null, "Details are correct. Sure to proceed? ");
+                if (username.length() == 0 || password.length() == 0) {
+                    JOptionPane.showMessageDialog(null, "Please enter your credentials.");
+                    return;
+                }
+                String message = null;
+                User user = null;
+                try {
+                    user = UserDAO.retrieveUserDetails(username, password);
+                } catch (SQLException ex) {
+                    message = "Sorry but the program has crashed.";
+                    JOptionPane.showMessageDialog(null, message);
+                    Logger.getLogger(SignIn.class.getName()).log(Level.SEVERE, null, ex);
+                    System.exit(0);
+                } catch (UserSideException ex) {
+                    switch (ex.getErrorCode()) {
+                        case UserNotFound:
+                            message = "Your username is invalid. Please check it.";
+                            break;
+                        case InvalidCredentials:
+                            message = "Please check your login credentials and try again.";
+                            break;
+                        default:
+                            message = "There is some error. Please reload the application.";
+                    }
+                }
+                if (message == null) {
+                    new Home(user).setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, message);
+                }
             }
         });
         btnSignIn.setBounds(188, 232, 89, 23);

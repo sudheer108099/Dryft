@@ -1,17 +1,23 @@
 package com.Dryft.gui;
 
+import com.Dryft.DAOs.UserDAO;
+import com.Dryft.exceptions.UserSideException;
+import com.Dryft.models.User;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class SignUp extends JFrame {
 
     private final ButtonGroup buttonGroup = new ButtonGroup();
     private JPanel contentPane;
     private JTextField textField;
-    private JTextField userField;
+//    private JTextField userField;
     private JTextField mailField;
     private JPasswordField passwordField;
     private JPasswordField passwordField_1;
@@ -37,12 +43,12 @@ public class SignUp extends JFrame {
         lblFullName.setBounds(77, 74, 107, 14);
         contentPane.add(lblFullName);
 
-        JLabel lblUserName = new JLabel("USER NAME *");
-        lblUserName.setFont(new Font("Dialog", Font.PLAIN, 13));
-        lblUserName.setBounds(77, 120, 107, 14);
-        contentPane.add(lblUserName);
+//        JLabel lblUserName = new JLabel("USER NAME *");
+//        lblUserName.setFont(new Font("Dialog", Font.PLAIN, 13));
+//        lblUserName.setBounds(77, 120, 107, 14);
+//        contentPane.add(lblUserName);
 
-        JLabel lblEmailId = new JLabel("EMAIL ID");
+        JLabel lblEmailId = new JLabel("EMAIL ID *");
         lblEmailId.setFont(new Font("Dialog", Font.PLAIN, 13));
         lblEmailId.setBounds(77, 166, 107, 14);
         contentPane.add(lblEmailId);
@@ -57,19 +63,19 @@ public class SignUp extends JFrame {
         lblConfirmPassword.setBounds(77, 256, 170, 14);
         contentPane.add(lblConfirmPassword);
 
-        JRadioButton maleButton = new JRadioButton("MALE");
+        final JRadioButton maleButton = new JRadioButton("MALE");
         maleButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
         buttonGroup.add(maleButton);
         maleButton.setBounds(231, 301, 66, 23);
         contentPane.add(maleButton);
 
-        JRadioButton femaleButton = new JRadioButton("FEMALE");
+        final JRadioButton femaleButton = new JRadioButton("FEMALE");
         femaleButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
         buttonGroup.add(femaleButton);
         femaleButton.setBounds(326, 301, 109, 23);
         contentPane.add(femaleButton);
 
-        JRadioButton defaultButton = new JRadioButton("New radio button");
+        final JRadioButton defaultButton = new JRadioButton("New radio button");
         buttonGroup.add(defaultButton);
         defaultButton.setBounds(503, 301, 109, 23);
         contentPane.add(defaultButton);
@@ -84,11 +90,11 @@ public class SignUp extends JFrame {
         textField.setBounds(257, 74, 138, 20);
         contentPane.add(textField);
         textField.setColumns(10);
-
-        userField = new JTextField();
-        userField.setBounds(257, 120, 134, 20);
-        contentPane.add(userField);
-        userField.setColumns(10);
+//
+//        userField = new JTextField();
+//        userField.setBounds(257, 120, 134, 20);
+//        contentPane.add(userField);
+//        userField.setColumns(10);
 
         mailField = new JTextField();
         mailField.setBounds(257, 166, 134, 20);
@@ -109,29 +115,42 @@ public class SignUp extends JFrame {
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String name = textField.getText();
-                String userName = userField.getText();
+//                String userName = userField.getText();
                 String email_id = mailField.getText();
                 String password = String.valueOf(passwordField.getPassword());
                 String confirmPassword = String.valueOf(passwordField_1.getPassword());
                 String gender = "F";
                 if (maleButton.isSelected() == true)
                     gender = "M";
-
-
-                if (password.contentEquals(confirmPassword) == false || password.length() == 0)
+                if (!password.contentEquals(confirmPassword) || password.length() == 0)
                     JOptionPane.showMessageDialog(null, "Password confirmation failed. Try again.");
-                else if (userName.length() == 0)
-                    JOptionPane.showMessageDialog(null, "Please enter the username");
+                else if (email_id.length() == 0)
+                    JOptionPane.showMessageDialog(null, "Please enter the email.");
                 else if (maleButton.isSelected() == false && femaleButton.isSelected() == false)
                     JOptionPane.showMessageDialog(null, "Please select a gender");
                 else {
-                    int x = JOptionPane.showConfirmDialog(null, "Account successfully created! Return to Signin Window ?");
-                    if (x == 0) {
-                        new SignIn().setVisible(true);
-                        dispose();
+                    User user = new User(name, email_id, password, gender.charAt(0), 0);
+                    try {
+                        UserDAO.createUser(user);
+                    } catch (SQLException ex) {
+                        JOptionPane.showMessageDialog(null, "You could not be signed up at this moment. Inconvenience caused is regretted.");
+                        Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+                        return;
+                    } catch (UserSideException ex) {
+                        switch (ex.getErrorCode()) {
+                            case EmailAlreadyExists:
+                                JOptionPane.showMessageDialog(null, "This email is taken.");
+                                mailField.setText("");
+                                return;
+                            default:
+                                JOptionPane.showMessageDialog(null, "Some error occured. Inconvenience caused is regretted.");
+                                return;
+                        }
                     }
+                    JOptionPane.showMessageDialog(null, "Account successfully created!");
+                    new SignIn().setVisible(true);
+                    dispose();
                 }
-
             }
         });
         btnNewButton.setBounds(100, 357, 167, 33);
@@ -142,7 +161,7 @@ public class SignUp extends JFrame {
         btnClear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 textField.setText("");
-                userField.setText("");
+//                userField.setText("");
                 mailField.setText("");
                 passwordField.setText("");
                 passwordField_1.setText("");
