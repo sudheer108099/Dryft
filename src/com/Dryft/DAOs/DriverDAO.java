@@ -15,7 +15,7 @@ import java.util.List;
 public class DriverDAO {
     public static Driver getDriver(int id) throws SQLException {
         Connection conn = DBConn.getConn();
-        PreparedStatement st = conn.prepareStatement("SELECT * FROM drivers WHERE id = (?)");
+        PreparedStatement st = conn.prepareStatement("SELECT * FROM drivers WHERE id = (?);");
         st.setInt(1, id);
         ResultSet result = st.executeQuery();
         DBConn.closeConn();
@@ -38,7 +38,7 @@ public class DriverDAO {
     public static List<Driver> getAllDriversInALocation(Location location) throws SQLException {
         List<Driver> drivers = new ArrayList<>();
         Connection conn = DBConn.getConn();
-        PreparedStatement st = conn.prepareStatement("SELECT * FROM drivers where location = (?)");
+        PreparedStatement st = conn.prepareStatement("SELECT * FROM drivers where location = (?);");
         ResultSet result = st.executeQuery();
         while (result.next()) {
             Driver driver = new Driver(
@@ -56,15 +56,18 @@ public class DriverDAO {
         return drivers;
     }
 
-    public static Driver getBestDriver(char userSex, Location origin, Car.CarType type) throws SQLException {
+    public static Driver getBestDriver(Location origin, Car.CarType type) throws SQLException {
         Connection conn = DBConn.getConn();
-        PreparedStatement st = conn.prepareStatement("SELECT * FROM " +
-                "(drivers INNER JOIN cars ON drivers.carNumber = cars.licenseNumber) " +
-                "WHERE sex = (?) AND location = (?) AND CarType = (?) " +
-                "ORDER BY rating DESC");
+        PreparedStatement st = conn.prepareStatement(
+                "SELECT * FROM " +
+                        "(drivers INNER JOIN cars c ON drivers.carNumber = c.licenseNumber INNER JOIN locations l on drivers.location = l.name) " +
+                        "WHERE CarType = (?) " +
+                        "ORDER BY (abs((?) - x) + abs((?) - y)), rating DESC;"
+        );
         st.setString(1, String.valueOf(userSex));
-        st.setString(2, origin.getName());
-        st.setString(3, type.name());
+        st.setString(2, type.name());
+        st.setInt(3, origin.getX());
+        st.setInt(4, origin.getY());
         var result = st.executeQuery();
         DBConn.closeConn();
         if (result.next()) {
@@ -85,12 +88,12 @@ public class DriverDAO {
 
     public static boolean markDriverOnRoadIfFree(int id) throws SQLException {
         Connection conn = DBConn.getConn();
-        PreparedStatement st = conn.prepareStatement("SELECT onRoad from drivers where id = (?)");
+        PreparedStatement st = conn.prepareStatement("SELECT onRoad from drivers where id = (?);");
         st.setInt(1, id);
         var result = st.executeQuery();
         if (result.next()) {
             if (!result.getBoolean("onRoad")) {
-                st = conn.prepareStatement("UPDATE drivers set onRoad = (?) WHERE id = (?)");
+                st = conn.prepareStatement("UPDATE drivers set onRoad = (?) WHERE id = (?);");
                 st.setBoolean(1, true);
                 st.setInt(2, id);
                 st.executeQuery();
