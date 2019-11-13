@@ -99,12 +99,13 @@ public class PopulateDB {
         String createRideTable = "CREATE TABLE rides (" +
                 "id INT PRIMARY KEY," +
                 "userEmail TEXT ," +
-                "driver TEXT," +
+                "driver INT," +
                 "source TEXT," +
                 "destination TEXT," +
-                "startTime TEXT," +
+                "startTime DATETIME," +
                 "duration INT," +
                 "distance INT," +
+                "driverTime INT," +
                 "cost INT," +
                 "FOREIGN KEY(userEmail) REFERENCES users(email)," +
                 "FOREIGN KEY(driver) REFERENCES drivers(id)," +

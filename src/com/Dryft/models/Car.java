@@ -7,7 +7,6 @@ public class Car {
     private final CarType type;
     private final int speed;
 
-
     public Car(String model, int costPerKm, String licenseNumber, CarType type, int speed) {
         this.model = model;
         this.costPerKm = costPerKm;
@@ -37,9 +36,6 @@ public class Car {
     }
 
     public enum CarType {
-        MINI,
-        SUV,
-        MICRO,
-        PRIME
+        MINI, SUV, MICRO, PRIME
     }
 }

@@ -12,6 +12,21 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
+    public static User getUser(String email) throws SQLException {
+        Connection conn = DBConn.getConn();
+        PreparedStatement st = conn.prepareStatement("Select * from users where email = (?);");
+        st.setString(1, email);
+        ResultSet result = st.executeQuery();
+        if (result.next()) {
+            DBConn.closeConn();
+            return new User(result.getString("fullname"), email, result.getString("password"),
+                    result.getString("sex").charAt(0), result.getInt("balance"));
+        } else {
+            DBConn.closeConn();
+            throw new IllegalArgumentException("User not found");
+        }
+    }
+
     public static void createUser(User user) throws SQLException {
         Connection conn = DBConn.getConn();
         checkUserAlreadyExists(user, conn);
@@ -65,4 +80,19 @@ public class UserDAO {
         DBConn.closeConn();
         return user;
     }
+
+    public static void incrementBalance(String email, int balance) throws SQLException {
+        Connection conn = DBConn.getConn();
+        String query = "Update users set balance= (?) where email = (?);";
+        PreparedStatement st = conn.prepareStatement(query);
+        st.setInt(1, balance);
+        st.setString(2, email);
+        ResultSet result = st.executeQuery();
+        if (!result.next()) {
+            DBConn.closeConn();
+            throw new IllegalArgumentException("User not found");
+        }
+        DBConn.closeConn();
+    }
+
 }

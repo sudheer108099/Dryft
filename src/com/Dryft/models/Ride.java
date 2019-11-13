@@ -11,11 +11,13 @@ public class Ride {
     private final int distance;
     private final int duration;
     private final int cost;
+    private final int driverTime;
 
     public Ride(Location source, Location destination, Driver driver, User user) {
         int distance = calculateDistance(source, destination);
         int duration = calculateDuration(distance, driver);
         int cost = calculateCost(distance, driver);
+        int driverTime = calculateDriverTime(source, driver);
         this.source = source;
         this.destination = destination;
         this.driver = driver;
@@ -23,6 +25,20 @@ public class Ride {
         this.startTime = LocalDateTime.now();
         this.distance = distance;
         this.duration = duration;
+        this.driverTime = driverTime;
+        this.cost = cost;
+    }
+
+    public Ride(Location source, Location destination, Driver driver, User user, LocalDateTime startTime, int distance,
+            int duration, int driverTime, int cost) {
+        this.source = source;
+        this.destination = destination;
+        this.driver = driver;
+        this.user = user;
+        this.startTime = startTime;
+        this.distance = distance;
+        this.duration = duration;
+        this.driverTime = driverTime;
         this.cost = cost;
     }
 
@@ -31,9 +47,18 @@ public class Ride {
         return Math.abs(destination.getX() - source.getX()) + Math.abs(destination.getY() - source.getY());
     }
 
-    public static int calculateDuration(int distance, Driver driver) { return distance / driver.getCar().getSpeed(); }
+    public static int calculateDuration(int distance, Driver driver) {
+        return distance / driver.getCar().getSpeed();
+    }
 
-    public static int calculateCost(int distance, Driver driver) { return distance * driver.getCar().getCostPerKm(); }
+    public static int calculateDriverTime(Location source, Driver driver) {
+        int distance = calculateDistance(driver.getLocation(), source);
+        return distance / driver.getCar().getSpeed();
+    }
+
+    public static int calculateCost(int distance, Driver driver) {
+        return distance * driver.getCar().getCostPerKm();
+    }
 
     public Location getSource() {
         return source;
@@ -61,6 +86,10 @@ public class Ride {
 
     public int getDuration() {
         return duration;
+    }
+
+    public int getDriverTime() {
+        return driverTime;
     }
 
     public int getCost() {
