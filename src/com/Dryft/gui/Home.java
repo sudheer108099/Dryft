@@ -3,8 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.Dryft.gui;
+import com.Dryft.DAOs.LocationDAO;
+import com.Dryft.DAOs.DriverDAO;
+import com.Dryft.models.Car.CarType;
+import com.Dryft.models.Location;
+import com.Dryft.models.User;
+import com.Dryft.models.Driver;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 import javax.swing.JOptionPane;
 
@@ -13,11 +23,39 @@ import javax.swing.JOptionPane;
  * @author T Sudheer Kumar
  */
 public class Home extends javax.swing.JFrame {
-
+    private final User user;
+    private String name = "username";
+    private int balance = 200;
+    
+    private List<Location> locations;
     /**
      * Creates new form Home
      */
     public Home() {
+        try {
+            this.locations = LocationDAO.getAllLocations();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Database cannot be reached at the moment. Incovenience caused is regretted.");
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+            new SignIn().setVisible(true);
+            this.dispose();
+        }
+        user = null;
+        initComponents();
+    }
+    
+    public Home(User user) {
+        try {
+            this.locations = LocationDAO.getAllLocations();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Database cannot be reached at the moment. Incovenience caused is regretted.");
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+            new SignIn().setVisible(true);
+            this.dispose();
+        }
+        this.user = user;
+        this.name = this.user.getFullname();
+        this.balance = this.user.getBalance();
         initComponents();
     }
 
@@ -54,10 +92,10 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setText("DRYFT");
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jLabel2.setText("Hi, USERNAME");
+        jLabel2.setText("Hi, " + this.name);
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jLabel3.setText("Current Balance");
+        jLabel3.setText("Rs " + this.balance);
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel4.setText("PICKUP LOCATION");
@@ -66,7 +104,7 @@ public class Home extends javax.swing.JFrame {
         jLabel5.setText("DESTINATION");
 
         jComboBox1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bangalore", "Hyderabad", "Delhi", "Ambala", "Chennai", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(this.locations.stream().map(Location::getName).toArray()));
 
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jButton1.setText("BOOK NOW !");
@@ -86,7 +124,7 @@ public class Home extends javax.swing.JFrame {
         });
 
         jComboBox2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hyderabad\t", "Bangalore\t", "Chennai\t", "Nagpur", "Ambala", "Bihar", "Ayodhya", "Bits Pilani Pilani Campus", "Bits Pilani Hyderabad Campus", "Bits Pilani Goa Campus", "Secunderabad Railway Station" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(this.locations.stream().map(Location::getName).toArray()));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -111,7 +149,12 @@ public class Home extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 0, 255));
-        jButton4.setText(" Change Password");
+        jButton4.setText("Your Rides");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel9.setText("TYPE OF CAR");
@@ -131,15 +174,14 @@ public class Home extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGap(194, 194, 194)
-                            .addGap(40, 40, 40))
+                            .addGap(234, 234, 234))
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(76, 76, 76)
+                            .addGap(80, 80, 80)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jComboBox3, 0, 158, Short.MAX_VALUE)
+                                .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -194,7 +236,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -208,13 +250,20 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-String pickUp=(String)jComboBox1.getSelectedItem();
-String destination=(String)jComboBox2.getSelectedItem();
-String carType=(String)jComboBox3.getSelectedItem();
-JOptionPane.showMessageDialog(null,"Pickup:-"+pickUp+"\nDestination:-"+destination+"\nCar Type:-"+carType);
-
-//this.dispose();
-       // JOptionPane.showMessageDialog(null,"Loading......");// TODO add your handling code here:
+        String pickUp = (String) jComboBox1.getSelectedItem();
+        String destination = (String) jComboBox2.getSelectedItem();
+        String carType = (String) jComboBox3.getSelectedItem();
+        Location origin = this.locations.stream().filter(x -> x.getName().equals(pickUp)).findFirst().get();
+        Location dest = this.locations.stream().filter(x -> x.getName().equals(destination)).findFirst().get();
+        CarType type = CarType.valueOf(carType);
+        try {
+            Driver driver = DriverDAO.getBestDriver(origin, type);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Database could not be connected. Inconvenience caused is regretted.");
+        } catch (IllegalArgumentException ex) {
+           // Show error for driver not found
+        }
+        JOptionPane.showMessageDialog(null, "Pickup:-" + pickUp + "\nDestination:-" + destination + "\nCar Type:-" + carType);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
@@ -222,13 +271,21 @@ JOptionPane.showMessageDialog(null,"Pickup:-"+pickUp+"\nDestination:-"+destinati
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-new SignIn().setVisible(true);   
-this.dispose();// TODO add your handling code here:
+        new SignIn().setVisible(true);
+        this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-new Addmoney().setVisible(true);        // TODO add your handling code here:
+//if(curr_bal<300) if curr balance is less than 300
+        new addMoney(this.user).setVisible(true);
+        this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispose();
+        new ridesList().setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,8 +321,6 @@ new Addmoney().setVisible(true);        // TODO add your handling code here:
             }
         });
     }
-    
-    public static void main(int i) {}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

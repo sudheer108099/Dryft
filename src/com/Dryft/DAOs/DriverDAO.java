@@ -61,11 +61,11 @@ public class DriverDAO {
         PreparedStatement st = conn.prepareStatement(
                 "SELECT * FROM " +
                         "(drivers INNER JOIN cars c ON drivers.carNumber = c.licenseNumber INNER JOIN locations l on drivers.location = l.name) " +
-                        "WHERE CarType = (?) " +
+                        "WHERE CarType = (?) AND onRoad = (?) " +
                         "ORDER BY (abs((?) - x) + abs((?) - y)), rating DESC;"
         );
-        st.setString(1, String.valueOf(userSex));
-        st.setString(2, type.name());
+        st.setString(1, type.name());
+        st.setBoolean(2, false);
         st.setInt(3, origin.getX());
         st.setInt(4, origin.getY());
         var result = st.executeQuery();

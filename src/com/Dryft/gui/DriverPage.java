@@ -6,6 +6,7 @@
 
 package com.Dryft.gui;
 
+import com.Dryft.models.Driver;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,7 +14,9 @@ import javax.swing.JOptionPane;
  * @author T Sudheer Kumar
  */
 public class DriverPage extends javax.swing.JFrame {
-
+    String name;
+    String licenseNumber;
+    
     /**
      * Creates new form DriverPage
      */
@@ -21,6 +24,10 @@ public class DriverPage extends javax.swing.JFrame {
         initComponents();
     }
 
+    public DriverPage(Driver driver) {
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
