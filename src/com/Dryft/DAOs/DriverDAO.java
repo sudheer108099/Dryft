@@ -17,13 +17,15 @@ public class DriverDAO {
         PreparedStatement st = conn.prepareStatement("SELECT * FROM drivers WHERE id = (?);");
         st.setInt(1, id);
         ResultSet result = st.executeQuery();
-        DBConn.closeConn();
         if (result.next()) {
-            return new Driver(result.getInt("id"), result.getString("name"),
+            Driver d = new Driver(result.getInt("id"), result.getString("name"),
                     CarDAO.getCar(result.getString("CarNumber")), LocationDAO.getLocation(result.getString("location")),
                     result.getString("sex").charAt(0), result.getDouble("rating"), result.getInt("reviews"),
                     result.getBoolean("onRoad"));
+            DBConn.closeConn();
+            return d;
         } else {
+            DBConn.closeConn();
             throw new IllegalArgumentException("Driver not found");
         }
     }
@@ -32,9 +34,9 @@ public class DriverDAO {
         Connection conn = DBConn.getConn();
         PreparedStatement st = conn.prepareStatement(
                 "SELECT * FROM "
-                + "(drivers INNER JOIN cars c ON drivers.carNumber = c.licenseNumber INNER JOIN locations l on drivers.location = l.name) "
-                + "WHERE CarType = (?) AND onRoad = (?) "
-                + "ORDER BY (abs((?) - x) + abs((?) - y)), rating DESC;"
+                        + "(drivers INNER JOIN cars c ON drivers.carNumber = c.licenseNumber INNER JOIN locations l on drivers.location = l.name) "
+                        + "WHERE CarType = (?) AND onRoad = (?) "
+                        + "ORDER BY (abs((?) - x) + abs((?) - y)), rating DESC;"
         );
         st.setString(1, type.name());
         st.setBoolean(2, false);
@@ -60,7 +62,7 @@ public class DriverDAO {
         }
     }
 
-    public static void checkDriverAvailibility(Driver driver) throws SQLException {
+    public static void checkDriverAvailability(Driver driver) throws SQLException {
         Connection conn = DBConn.getConn();
         PreparedStatement st = conn.prepareStatement("Select onRoad from drivers where id = (?);");
         st.setInt(1, driver.getId());
@@ -79,15 +81,16 @@ public class DriverDAO {
 
     public static void freeDriver(int id) throws SQLException {
         Connection conn = DBConn.getConn();
-        PreparedStatement st = conn.prepareStatement("Update drivers set onRoad = (?);");
+        PreparedStatement st = conn.prepareStatement("Update drivers set onRoad = (?) WHERE id = (?);");
         st.setBoolean(1, false);
+        st.setInt(2, id);
         int i = st.executeUpdate();
         DBConn.closeConn();
         if (i == 0) {
             throw new IllegalArgumentException("Invalid Driver");
         }
     }
-    
+
     public static void updateRating(Driver driver, int rating) throws SQLException {
         Connection conn = DBConn.getConn();
         double realRating = driver.updateRating(rating);

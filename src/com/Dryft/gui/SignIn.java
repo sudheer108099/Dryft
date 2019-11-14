@@ -3,6 +3,7 @@ package com.Dryft.gui;
 import com.Dryft.DAOs.UserDAO;
 import com.Dryft.exceptions.UserSideException;
 import com.Dryft.models.User;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -13,10 +14,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SignIn extends JFrame {
-
-    void quit() {
-        this.dispose();
-    }
 
     private JPanel contentPane;
     private JTextField textField;
@@ -165,5 +162,9 @@ public class SignIn extends JFrame {
                 }
             }
         });
+    }
+
+    void quit() {
+        this.dispose();
     }
 }

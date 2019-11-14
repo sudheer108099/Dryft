@@ -17,10 +17,12 @@ public class LocationDAO {
         PreparedStatement st = conn.prepareStatement("SELECT * FROM locations WHERE name = (?);");
         st.setString(1, name);
         ResultSet result = st.executeQuery();
-        DBConn.closeConn();
         if (result.next()) {
-            return new Location(result.getString("name"), result.getInt("x"), result.getInt("y"));
+            Location l = new Location(result.getString("name"), result.getInt("x"), result.getInt("y"));
+            DBConn.closeConn();
+            return l;
         } else {
+            DBConn.closeConn();
             throw new IllegalArgumentException("Location not found");
         }
     }

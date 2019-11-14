@@ -18,9 +18,10 @@ public class UserDAO {
         st.setString(1, email);
         ResultSet result = st.executeQuery();
         if (result.next()) {
-            DBConn.closeConn();
-            return new User(result.getString("fullname"), email, result.getString("password"),
+            User u = new User(result.getString("fullname"), email, result.getString("password"),
                     result.getString("sex").charAt(0), result.getInt("balance"));
+            DBConn.closeConn();
+            return u;
         } else {
             DBConn.closeConn();
             throw new IllegalArgumentException("User not found");

@@ -31,7 +31,7 @@ public class Ride {
     }
 
     public Ride(Location source, Location destination, Driver driver, User user, LocalDateTime startTime, int distance,
-            int duration, int driverTime, int cost) {
+                int duration, int driverTime, int cost) {
         this.source = source;
         this.destination = destination;
         this.driver = driver;

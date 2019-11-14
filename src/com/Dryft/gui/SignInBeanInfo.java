@@ -8,18 +8,9 @@ package com.Dryft.gui;
 import java.beans.*;
 
 /**
- *
  * @author T Sudheer Kumar
  */
 public class SignInBeanInfo extends SimpleBeanInfo {
-
-    // Bean descriptor//GEN-FIRST:BeanDescriptor
-    /*lazy BeanDescriptor*/
-    private static BeanDescriptor getBdescriptor(){
-        BeanDescriptor beanDescriptor = new BeanDescriptor  ( com.Dryft.gui.SignIn.class , null ); // NOI18N//GEN-HEADEREND:BeanDescriptor
-    // Here you can add code for customizing the BeanDescriptor.
-
-        return beanDescriptor;     }//GEN-LAST:BeanDescriptor
 
     // Property identifiers//GEN-FIRST:Properties
     private static final int PROPERTY_accessibleContext = 0;
@@ -136,135 +127,6 @@ public class SignInBeanInfo extends SimpleBeanInfo {
     private static final int PROPERTY_windowStateListeners = 111;
     private static final int PROPERTY_x = 112;
     private static final int PROPERTY_y = 113;
-
-    // Property array 
-    /*lazy PropertyDescriptor*/
-    private static PropertyDescriptor[] getPdescriptor(){
-        PropertyDescriptor[] properties = new PropertyDescriptor[114];
-    
-        try {
-            properties[PROPERTY_accessibleContext] = new PropertyDescriptor ( "accessibleContext", com.Dryft.gui.SignIn.class, "getAccessibleContext", null ); // NOI18N
-            properties[PROPERTY_active] = new PropertyDescriptor ( "active", com.Dryft.gui.SignIn.class, "isActive", null ); // NOI18N
-            properties[PROPERTY_alignmentX] = new PropertyDescriptor ( "alignmentX", com.Dryft.gui.SignIn.class, "getAlignmentX", null ); // NOI18N
-            properties[PROPERTY_alignmentY] = new PropertyDescriptor ( "alignmentY", com.Dryft.gui.SignIn.class, "getAlignmentY", null ); // NOI18N
-            properties[PROPERTY_alwaysOnTop] = new PropertyDescriptor ( "alwaysOnTop", com.Dryft.gui.SignIn.class, "isAlwaysOnTop", "setAlwaysOnTop" ); // NOI18N
-            properties[PROPERTY_alwaysOnTopSupported] = new PropertyDescriptor ( "alwaysOnTopSupported", com.Dryft.gui.SignIn.class, "isAlwaysOnTopSupported", null ); // NOI18N
-            properties[PROPERTY_autoRequestFocus] = new PropertyDescriptor ( "autoRequestFocus", com.Dryft.gui.SignIn.class, "isAutoRequestFocus", "setAutoRequestFocus" ); // NOI18N
-            properties[PROPERTY_background] = new PropertyDescriptor ( "background", com.Dryft.gui.SignIn.class, "getBackground", "setBackground" ); // NOI18N
-            properties[PROPERTY_backgroundSet] = new PropertyDescriptor ( "backgroundSet", com.Dryft.gui.SignIn.class, "isBackgroundSet", null ); // NOI18N
-            properties[PROPERTY_baselineResizeBehavior] = new PropertyDescriptor ( "baselineResizeBehavior", com.Dryft.gui.SignIn.class, "getBaselineResizeBehavior", null ); // NOI18N
-            properties[PROPERTY_bounds] = new PropertyDescriptor ( "bounds", com.Dryft.gui.SignIn.class, "getBounds", "setBounds" ); // NOI18N
-            properties[PROPERTY_bufferStrategy] = new PropertyDescriptor ( "bufferStrategy", com.Dryft.gui.SignIn.class, "getBufferStrategy", null ); // NOI18N
-            properties[PROPERTY_colorModel] = new PropertyDescriptor ( "colorModel", com.Dryft.gui.SignIn.class, "getColorModel", null ); // NOI18N
-            properties[PROPERTY_component] = new IndexedPropertyDescriptor ( "component", com.Dryft.gui.SignIn.class, null, null, "getComponent", null ); // NOI18N
-            properties[PROPERTY_componentCount] = new PropertyDescriptor ( "componentCount", com.Dryft.gui.SignIn.class, "getComponentCount", null ); // NOI18N
-            properties[PROPERTY_componentListeners] = new PropertyDescriptor ( "componentListeners", com.Dryft.gui.SignIn.class, "getComponentListeners", null ); // NOI18N
-            properties[PROPERTY_componentOrientation] = new PropertyDescriptor ( "componentOrientation", com.Dryft.gui.SignIn.class, "getComponentOrientation", "setComponentOrientation" ); // NOI18N
-            properties[PROPERTY_components] = new PropertyDescriptor ( "components", com.Dryft.gui.SignIn.class, "getComponents", null ); // NOI18N
-            properties[PROPERTY_containerListeners] = new PropertyDescriptor ( "containerListeners", com.Dryft.gui.SignIn.class, "getContainerListeners", null ); // NOI18N
-            properties[PROPERTY_contentPane] = new PropertyDescriptor ( "contentPane", com.Dryft.gui.SignIn.class, "getContentPane", "setContentPane" ); // NOI18N
-            properties[PROPERTY_cursor] = new PropertyDescriptor ( "cursor", com.Dryft.gui.SignIn.class, null, "setCursor" ); // NOI18N
-            properties[PROPERTY_cursorSet] = new PropertyDescriptor ( "cursorSet", com.Dryft.gui.SignIn.class, "isCursorSet", null ); // NOI18N
-            properties[PROPERTY_cursorType] = new PropertyDescriptor ( "cursorType", com.Dryft.gui.SignIn.class, "getCursorType", null ); // NOI18N
-            properties[PROPERTY_defaultCloseOperation] = new PropertyDescriptor ( "defaultCloseOperation", com.Dryft.gui.SignIn.class, "getDefaultCloseOperation", "setDefaultCloseOperation" ); // NOI18N
-            properties[PROPERTY_displayable] = new PropertyDescriptor ( "displayable", com.Dryft.gui.SignIn.class, "isDisplayable", null ); // NOI18N
-            properties[PROPERTY_doubleBuffered] = new PropertyDescriptor ( "doubleBuffered", com.Dryft.gui.SignIn.class, "isDoubleBuffered", null ); // NOI18N
-            properties[PROPERTY_dropTarget] = new PropertyDescriptor ( "dropTarget", com.Dryft.gui.SignIn.class, "getDropTarget", "setDropTarget" ); // NOI18N
-            properties[PROPERTY_enabled] = new PropertyDescriptor ( "enabled", com.Dryft.gui.SignIn.class, "isEnabled", "setEnabled" ); // NOI18N
-            properties[PROPERTY_extendedState] = new PropertyDescriptor ( "extendedState", com.Dryft.gui.SignIn.class, "getExtendedState", "setExtendedState" ); // NOI18N
-            properties[PROPERTY_focusable] = new PropertyDescriptor ( "focusable", com.Dryft.gui.SignIn.class, "isFocusable", "setFocusable" ); // NOI18N
-            properties[PROPERTY_focusableWindow] = new PropertyDescriptor ( "focusableWindow", com.Dryft.gui.SignIn.class, "isFocusableWindow", null ); // NOI18N
-            properties[PROPERTY_focusableWindowState] = new PropertyDescriptor ( "focusableWindowState", com.Dryft.gui.SignIn.class, "getFocusableWindowState", "setFocusableWindowState" ); // NOI18N
-            properties[PROPERTY_focusCycleRoot] = new PropertyDescriptor ( "focusCycleRoot", com.Dryft.gui.SignIn.class, "isFocusCycleRoot", "setFocusCycleRoot" ); // NOI18N
-            properties[PROPERTY_focusCycleRootAncestor] = new PropertyDescriptor ( "focusCycleRootAncestor", com.Dryft.gui.SignIn.class, "getFocusCycleRootAncestor", null ); // NOI18N
-            properties[PROPERTY_focused] = new PropertyDescriptor ( "focused", com.Dryft.gui.SignIn.class, "isFocused", null ); // NOI18N
-            properties[PROPERTY_focusListeners] = new PropertyDescriptor ( "focusListeners", com.Dryft.gui.SignIn.class, "getFocusListeners", null ); // NOI18N
-            properties[PROPERTY_focusOwner] = new PropertyDescriptor ( "focusOwner", com.Dryft.gui.SignIn.class, "getFocusOwner", null ); // NOI18N
-            properties[PROPERTY_focusTraversable] = new PropertyDescriptor ( "focusTraversable", com.Dryft.gui.SignIn.class, "isFocusTraversable", null ); // NOI18N
-            properties[PROPERTY_focusTraversalKeys] = new IndexedPropertyDescriptor ( "focusTraversalKeys", com.Dryft.gui.SignIn.class, null, null, "getFocusTraversalKeys", null ); // NOI18N
-            properties[PROPERTY_focusTraversalKeysEnabled] = new PropertyDescriptor ( "focusTraversalKeysEnabled", com.Dryft.gui.SignIn.class, "getFocusTraversalKeysEnabled", "setFocusTraversalKeysEnabled" ); // NOI18N
-            properties[PROPERTY_focusTraversalPolicy] = new PropertyDescriptor ( "focusTraversalPolicy", com.Dryft.gui.SignIn.class, "getFocusTraversalPolicy", "setFocusTraversalPolicy" ); // NOI18N
-            properties[PROPERTY_focusTraversalPolicyProvider] = new PropertyDescriptor ( "focusTraversalPolicyProvider", com.Dryft.gui.SignIn.class, "isFocusTraversalPolicyProvider", "setFocusTraversalPolicyProvider" ); // NOI18N
-            properties[PROPERTY_focusTraversalPolicySet] = new PropertyDescriptor ( "focusTraversalPolicySet", com.Dryft.gui.SignIn.class, "isFocusTraversalPolicySet", null ); // NOI18N
-            properties[PROPERTY_font] = new PropertyDescriptor ( "font", com.Dryft.gui.SignIn.class, "getFont", "setFont" ); // NOI18N
-            properties[PROPERTY_fontSet] = new PropertyDescriptor ( "fontSet", com.Dryft.gui.SignIn.class, "isFontSet", null ); // NOI18N
-            properties[PROPERTY_foreground] = new PropertyDescriptor ( "foreground", com.Dryft.gui.SignIn.class, "getForeground", "setForeground" ); // NOI18N
-            properties[PROPERTY_foregroundSet] = new PropertyDescriptor ( "foregroundSet", com.Dryft.gui.SignIn.class, "isForegroundSet", null ); // NOI18N
-            properties[PROPERTY_glassPane] = new PropertyDescriptor ( "glassPane", com.Dryft.gui.SignIn.class, "getGlassPane", "setGlassPane" ); // NOI18N
-            properties[PROPERTY_graphics] = new PropertyDescriptor ( "graphics", com.Dryft.gui.SignIn.class, "getGraphics", null ); // NOI18N
-            properties[PROPERTY_graphicsConfiguration] = new PropertyDescriptor ( "graphicsConfiguration", com.Dryft.gui.SignIn.class, "getGraphicsConfiguration", null ); // NOI18N
-            properties[PROPERTY_height] = new PropertyDescriptor ( "height", com.Dryft.gui.SignIn.class, "getHeight", null ); // NOI18N
-            properties[PROPERTY_hierarchyBoundsListeners] = new PropertyDescriptor ( "hierarchyBoundsListeners", com.Dryft.gui.SignIn.class, "getHierarchyBoundsListeners", null ); // NOI18N
-            properties[PROPERTY_hierarchyListeners] = new PropertyDescriptor ( "hierarchyListeners", com.Dryft.gui.SignIn.class, "getHierarchyListeners", null ); // NOI18N
-            properties[PROPERTY_iconImage] = new PropertyDescriptor ( "iconImage", com.Dryft.gui.SignIn.class, "getIconImage", "setIconImage" ); // NOI18N
-            properties[PROPERTY_iconImages] = new PropertyDescriptor ( "iconImages", com.Dryft.gui.SignIn.class, null, "setIconImages" ); // NOI18N
-            properties[PROPERTY_ignoreRepaint] = new PropertyDescriptor ( "ignoreRepaint", com.Dryft.gui.SignIn.class, "getIgnoreRepaint", "setIgnoreRepaint" ); // NOI18N
-            properties[PROPERTY_inputContext] = new PropertyDescriptor ( "inputContext", com.Dryft.gui.SignIn.class, "getInputContext", null ); // NOI18N
-            properties[PROPERTY_inputMethodListeners] = new PropertyDescriptor ( "inputMethodListeners", com.Dryft.gui.SignIn.class, "getInputMethodListeners", null ); // NOI18N
-            properties[PROPERTY_inputMethodRequests] = new PropertyDescriptor ( "inputMethodRequests", com.Dryft.gui.SignIn.class, "getInputMethodRequests", null ); // NOI18N
-            properties[PROPERTY_insets] = new PropertyDescriptor ( "insets", com.Dryft.gui.SignIn.class, "getInsets", null ); // NOI18N
-            properties[PROPERTY_JMenuBar] = new PropertyDescriptor ( "JMenuBar", com.Dryft.gui.SignIn.class, "getJMenuBar", "setJMenuBar" ); // NOI18N
-            properties[PROPERTY_keyListeners] = new PropertyDescriptor ( "keyListeners", com.Dryft.gui.SignIn.class, "getKeyListeners", null ); // NOI18N
-            properties[PROPERTY_layeredPane] = new PropertyDescriptor ( "layeredPane", com.Dryft.gui.SignIn.class, "getLayeredPane", "setLayeredPane" ); // NOI18N
-            properties[PROPERTY_layout] = new PropertyDescriptor ( "layout", com.Dryft.gui.SignIn.class, "getLayout", "setLayout" ); // NOI18N
-            properties[PROPERTY_lightweight] = new PropertyDescriptor ( "lightweight", com.Dryft.gui.SignIn.class, "isLightweight", null ); // NOI18N
-            properties[PROPERTY_locale] = new PropertyDescriptor ( "locale", com.Dryft.gui.SignIn.class, "getLocale", "setLocale" ); // NOI18N
-            properties[PROPERTY_location] = new PropertyDescriptor ( "location", com.Dryft.gui.SignIn.class, "getLocation", "setLocation" ); // NOI18N
-            properties[PROPERTY_locationByPlatform] = new PropertyDescriptor ( "locationByPlatform", com.Dryft.gui.SignIn.class, "isLocationByPlatform", "setLocationByPlatform" ); // NOI18N
-            properties[PROPERTY_locationOnScreen] = new PropertyDescriptor ( "locationOnScreen", com.Dryft.gui.SignIn.class, "getLocationOnScreen", null ); // NOI18N
-            properties[PROPERTY_locationRelativeTo] = new PropertyDescriptor ( "locationRelativeTo", com.Dryft.gui.SignIn.class, null, "setLocationRelativeTo" ); // NOI18N
-            properties[PROPERTY_maximizedBounds] = new PropertyDescriptor ( "maximizedBounds", com.Dryft.gui.SignIn.class, "getMaximizedBounds", "setMaximizedBounds" ); // NOI18N
-            properties[PROPERTY_maximumSize] = new PropertyDescriptor ( "maximumSize", com.Dryft.gui.SignIn.class, "getMaximumSize", "setMaximumSize" ); // NOI18N
-            properties[PROPERTY_maximumSizeSet] = new PropertyDescriptor ( "maximumSizeSet", com.Dryft.gui.SignIn.class, "isMaximumSizeSet", null ); // NOI18N
-            properties[PROPERTY_menuBar] = new PropertyDescriptor ( "menuBar", com.Dryft.gui.SignIn.class, "getMenuBar", "setMenuBar" ); // NOI18N
-            properties[PROPERTY_minimumSize] = new PropertyDescriptor ( "minimumSize", com.Dryft.gui.SignIn.class, "getMinimumSize", "setMinimumSize" ); // NOI18N
-            properties[PROPERTY_minimumSizeSet] = new PropertyDescriptor ( "minimumSizeSet", com.Dryft.gui.SignIn.class, "isMinimumSizeSet", null ); // NOI18N
-            properties[PROPERTY_modalExclusionType] = new PropertyDescriptor ( "modalExclusionType", com.Dryft.gui.SignIn.class, "getModalExclusionType", "setModalExclusionType" ); // NOI18N
-            properties[PROPERTY_mostRecentFocusOwner] = new PropertyDescriptor ( "mostRecentFocusOwner", com.Dryft.gui.SignIn.class, "getMostRecentFocusOwner", null ); // NOI18N
-            properties[PROPERTY_mouseListeners] = new PropertyDescriptor ( "mouseListeners", com.Dryft.gui.SignIn.class, "getMouseListeners", null ); // NOI18N
-            properties[PROPERTY_mouseMotionListeners] = new PropertyDescriptor ( "mouseMotionListeners", com.Dryft.gui.SignIn.class, "getMouseMotionListeners", null ); // NOI18N
-            properties[PROPERTY_mousePosition] = new PropertyDescriptor ( "mousePosition", com.Dryft.gui.SignIn.class, "getMousePosition", null ); // NOI18N
-            properties[PROPERTY_mouseWheelListeners] = new PropertyDescriptor ( "mouseWheelListeners", com.Dryft.gui.SignIn.class, "getMouseWheelListeners", null ); // NOI18N
-            properties[PROPERTY_name] = new PropertyDescriptor ( "name", com.Dryft.gui.SignIn.class, "getName", "setName" ); // NOI18N
-            properties[PROPERTY_opacity] = new PropertyDescriptor ( "opacity", com.Dryft.gui.SignIn.class, "getOpacity", "setOpacity" ); // NOI18N
-            properties[PROPERTY_opaque] = new PropertyDescriptor ( "opaque", com.Dryft.gui.SignIn.class, "isOpaque", null ); // NOI18N
-            properties[PROPERTY_ownedWindows] = new PropertyDescriptor ( "ownedWindows", com.Dryft.gui.SignIn.class, "getOwnedWindows", null ); // NOI18N
-            properties[PROPERTY_owner] = new PropertyDescriptor ( "owner", com.Dryft.gui.SignIn.class, "getOwner", null ); // NOI18N
-            properties[PROPERTY_parent] = new PropertyDescriptor ( "parent", com.Dryft.gui.SignIn.class, "getParent", null ); // NOI18N
-            properties[PROPERTY_peer] = new PropertyDescriptor ( "peer", com.Dryft.gui.SignIn.class, "getPeer", null ); // NOI18N
-            properties[PROPERTY_preferredSize] = new PropertyDescriptor ( "preferredSize", com.Dryft.gui.SignIn.class, "getPreferredSize", "setPreferredSize" ); // NOI18N
-            properties[PROPERTY_preferredSizeSet] = new PropertyDescriptor ( "preferredSizeSet", com.Dryft.gui.SignIn.class, "isPreferredSizeSet", null ); // NOI18N
-            properties[PROPERTY_propertyChangeListeners] = new PropertyDescriptor ( "propertyChangeListeners", com.Dryft.gui.SignIn.class, "getPropertyChangeListeners", null ); // NOI18N
-            properties[PROPERTY_resizable] = new PropertyDescriptor ( "resizable", com.Dryft.gui.SignIn.class, "isResizable", "setResizable" ); // NOI18N
-            properties[PROPERTY_rootPane] = new PropertyDescriptor ( "rootPane", com.Dryft.gui.SignIn.class, "getRootPane", null ); // NOI18N
-            properties[PROPERTY_shape] = new PropertyDescriptor ( "shape", com.Dryft.gui.SignIn.class, "getShape", "setShape" ); // NOI18N
-            properties[PROPERTY_showing] = new PropertyDescriptor ( "showing", com.Dryft.gui.SignIn.class, "isShowing", null ); // NOI18N
-            properties[PROPERTY_size] = new PropertyDescriptor ( "size", com.Dryft.gui.SignIn.class, "getSize", "setSize" ); // NOI18N
-            properties[PROPERTY_state] = new PropertyDescriptor ( "state", com.Dryft.gui.SignIn.class, "getState", "setState" ); // NOI18N
-            properties[PROPERTY_title] = new PropertyDescriptor ( "title", com.Dryft.gui.SignIn.class, "getTitle", "setTitle" ); // NOI18N
-            properties[PROPERTY_toolkit] = new PropertyDescriptor ( "toolkit", com.Dryft.gui.SignIn.class, "getToolkit", null ); // NOI18N
-            properties[PROPERTY_transferHandler] = new PropertyDescriptor ( "transferHandler", com.Dryft.gui.SignIn.class, "getTransferHandler", "setTransferHandler" ); // NOI18N
-            properties[PROPERTY_treeLock] = new PropertyDescriptor ( "treeLock", com.Dryft.gui.SignIn.class, "getTreeLock", null ); // NOI18N
-            properties[PROPERTY_type] = new PropertyDescriptor ( "type", com.Dryft.gui.SignIn.class, "getType", "setType" ); // NOI18N
-            properties[PROPERTY_undecorated] = new PropertyDescriptor ( "undecorated", com.Dryft.gui.SignIn.class, "isUndecorated", "setUndecorated" ); // NOI18N
-            properties[PROPERTY_valid] = new PropertyDescriptor ( "valid", com.Dryft.gui.SignIn.class, "isValid", null ); // NOI18N
-            properties[PROPERTY_validateRoot] = new PropertyDescriptor ( "validateRoot", com.Dryft.gui.SignIn.class, "isValidateRoot", null ); // NOI18N
-            properties[PROPERTY_visible] = new PropertyDescriptor ( "visible", com.Dryft.gui.SignIn.class, "isVisible", "setVisible" ); // NOI18N
-            properties[PROPERTY_warningString] = new PropertyDescriptor ( "warningString", com.Dryft.gui.SignIn.class, "getWarningString", null ); // NOI18N
-            properties[PROPERTY_width] = new PropertyDescriptor ( "width", com.Dryft.gui.SignIn.class, "getWidth", null ); // NOI18N
-            properties[PROPERTY_windowFocusListeners] = new PropertyDescriptor ( "windowFocusListeners", com.Dryft.gui.SignIn.class, "getWindowFocusListeners", null ); // NOI18N
-            properties[PROPERTY_windowListeners] = new PropertyDescriptor ( "windowListeners", com.Dryft.gui.SignIn.class, "getWindowListeners", null ); // NOI18N
-            properties[PROPERTY_windowStateListeners] = new PropertyDescriptor ( "windowStateListeners", com.Dryft.gui.SignIn.class, "getWindowStateListeners", null ); // NOI18N
-            properties[PROPERTY_x] = new PropertyDescriptor ( "x", com.Dryft.gui.SignIn.class, "getX", null ); // NOI18N
-            properties[PROPERTY_y] = new PropertyDescriptor ( "y", com.Dryft.gui.SignIn.class, "getY", null ); // NOI18N
-        }
-        catch(IntrospectionException e) {
-            e.printStackTrace();
-        }//GEN-HEADEREND:Properties
-        // Here you can add code for customizing the properties array.
-
-        return properties;     }//GEN-LAST:Properties
-
     // EventSet identifiers//GEN-FIRST:Events
     private static final int EVENT_componentListener = 0;
     private static final int EVENT_containerListener = 1;
@@ -280,35 +142,6 @@ public class SignInBeanInfo extends SimpleBeanInfo {
     private static final int EVENT_windowFocusListener = 11;
     private static final int EVENT_windowListener = 12;
     private static final int EVENT_windowStateListener = 13;
-
-    // EventSet array
-    /*lazy EventSetDescriptor*/
-    private static EventSetDescriptor[] getEdescriptor(){
-        EventSetDescriptor[] eventSets = new EventSetDescriptor[14];
-    
-        try {
-            eventSets[EVENT_componentListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "componentListener", java.awt.event.ComponentListener.class, new String[] {"componentResized", "componentMoved", "componentShown", "componentHidden"}, "addComponentListener", "removeComponentListener" ); // NOI18N
-            eventSets[EVENT_containerListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "containerListener", java.awt.event.ContainerListener.class, new String[] {"componentAdded", "componentRemoved"}, "addContainerListener", "removeContainerListener" ); // NOI18N
-            eventSets[EVENT_focusListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "focusListener", java.awt.event.FocusListener.class, new String[] {"focusGained", "focusLost"}, "addFocusListener", "removeFocusListener" ); // NOI18N
-            eventSets[EVENT_hierarchyBoundsListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "hierarchyBoundsListener", java.awt.event.HierarchyBoundsListener.class, new String[] {"ancestorMoved", "ancestorResized"}, "addHierarchyBoundsListener", "removeHierarchyBoundsListener" ); // NOI18N
-            eventSets[EVENT_hierarchyListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "hierarchyListener", java.awt.event.HierarchyListener.class, new String[] {"hierarchyChanged"}, "addHierarchyListener", "removeHierarchyListener" ); // NOI18N
-            eventSets[EVENT_inputMethodListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "inputMethodListener", java.awt.event.InputMethodListener.class, new String[] {"inputMethodTextChanged", "caretPositionChanged"}, "addInputMethodListener", "removeInputMethodListener" ); // NOI18N
-            eventSets[EVENT_keyListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "keyListener", java.awt.event.KeyListener.class, new String[] {"keyTyped", "keyPressed", "keyReleased"}, "addKeyListener", "removeKeyListener" ); // NOI18N
-            eventSets[EVENT_mouseListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "mouseListener", java.awt.event.MouseListener.class, new String[] {"mouseClicked", "mousePressed", "mouseReleased", "mouseEntered", "mouseExited"}, "addMouseListener", "removeMouseListener" ); // NOI18N
-            eventSets[EVENT_mouseMotionListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "mouseMotionListener", java.awt.event.MouseMotionListener.class, new String[] {"mouseDragged", "mouseMoved"}, "addMouseMotionListener", "removeMouseMotionListener" ); // NOI18N
-            eventSets[EVENT_mouseWheelListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "mouseWheelListener", java.awt.event.MouseWheelListener.class, new String[] {"mouseWheelMoved"}, "addMouseWheelListener", "removeMouseWheelListener" ); // NOI18N
-            eventSets[EVENT_propertyChangeListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "propertyChangeListener", java.beans.PropertyChangeListener.class, new String[] {"propertyChange"}, "addPropertyChangeListener", "removePropertyChangeListener" ); // NOI18N
-            eventSets[EVENT_windowFocusListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "windowFocusListener", java.awt.event.WindowFocusListener.class, new String[] {"windowGainedFocus", "windowLostFocus"}, "addWindowFocusListener", "removeWindowFocusListener" ); // NOI18N
-            eventSets[EVENT_windowListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "windowListener", java.awt.event.WindowListener.class, new String[] {"windowOpened", "windowClosing", "windowClosed", "windowIconified", "windowDeiconified", "windowActivated", "windowDeactivated"}, "addWindowListener", "removeWindowListener" ); // NOI18N
-            eventSets[EVENT_windowStateListener] = new EventSetDescriptor ( com.Dryft.gui.SignIn.class, "windowStateListener", java.awt.event.WindowStateListener.class, new String[] {"windowStateChanged"}, "addWindowStateListener", "removeWindowStateListener" ); // NOI18N
-        }
-        catch(IntrospectionException e) {
-            e.printStackTrace();
-        }//GEN-HEADEREND:Events
-        // Here you can add code for customizing the event sets array.
-
-        return eventSets;     }//GEN-LAST:Events
-
     // Method identifiers//GEN-FIRST:Methods
     private static final int METHOD_action0 = 0;
     private static final int METHOD_add1 = 1;
@@ -444,287 +277,8 @@ public class SignInBeanInfo extends SimpleBeanInfo {
     private static final int METHOD_transferFocusUpCycle131 = 131;
     private static final int METHOD_update132 = 132;
     private static final int METHOD_validate133 = 133;
-
-    // Method array 
-    /*lazy MethodDescriptor*/
-    private static MethodDescriptor[] getMdescriptor(){
-        MethodDescriptor[] methods = new MethodDescriptor[134];
-    
-        try {
-            methods[METHOD_action0] = new MethodDescriptor(java.awt.Component.class.getMethod("action", new Class[] {java.awt.Event.class, java.lang.Object.class})); // NOI18N
-            methods[METHOD_action0].setDisplayName ( "" );
-            methods[METHOD_add1] = new MethodDescriptor(java.awt.Component.class.getMethod("add", new Class[] {java.awt.PopupMenu.class})); // NOI18N
-            methods[METHOD_add1].setDisplayName ( "" );
-            methods[METHOD_add2] = new MethodDescriptor(java.awt.Container.class.getMethod("add", new Class[] {java.awt.Component.class})); // NOI18N
-            methods[METHOD_add2].setDisplayName ( "" );
-            methods[METHOD_add3] = new MethodDescriptor(java.awt.Container.class.getMethod("add", new Class[] {java.lang.String.class, java.awt.Component.class})); // NOI18N
-            methods[METHOD_add3].setDisplayName ( "" );
-            methods[METHOD_add4] = new MethodDescriptor(java.awt.Container.class.getMethod("add", new Class[] {java.awt.Component.class, int.class})); // NOI18N
-            methods[METHOD_add4].setDisplayName ( "" );
-            methods[METHOD_add5] = new MethodDescriptor(java.awt.Container.class.getMethod("add", new Class[] {java.awt.Component.class, java.lang.Object.class})); // NOI18N
-            methods[METHOD_add5].setDisplayName ( "" );
-            methods[METHOD_add6] = new MethodDescriptor(java.awt.Container.class.getMethod("add", new Class[] {java.awt.Component.class, java.lang.Object.class, int.class})); // NOI18N
-            methods[METHOD_add6].setDisplayName ( "" );
-            methods[METHOD_addNotify7] = new MethodDescriptor(java.awt.Frame.class.getMethod("addNotify", new Class[] {})); // NOI18N
-            methods[METHOD_addNotify7].setDisplayName ( "" );
-            methods[METHOD_addPropertyChangeListener8] = new MethodDescriptor(java.awt.Window.class.getMethod("addPropertyChangeListener", new Class[] {java.lang.String.class, java.beans.PropertyChangeListener.class})); // NOI18N
-            methods[METHOD_addPropertyChangeListener8].setDisplayName ( "" );
-            methods[METHOD_applyComponentOrientation9] = new MethodDescriptor(java.awt.Container.class.getMethod("applyComponentOrientation", new Class[] {java.awt.ComponentOrientation.class})); // NOI18N
-            methods[METHOD_applyComponentOrientation9].setDisplayName ( "" );
-            methods[METHOD_applyResourceBundle10] = new MethodDescriptor(java.awt.Window.class.getMethod("applyResourceBundle", new Class[] {java.util.ResourceBundle.class})); // NOI18N
-            methods[METHOD_applyResourceBundle10].setDisplayName ( "" );
-            methods[METHOD_applyResourceBundle11] = new MethodDescriptor(java.awt.Window.class.getMethod("applyResourceBundle", new Class[] {java.lang.String.class})); // NOI18N
-            methods[METHOD_applyResourceBundle11].setDisplayName ( "" );
-            methods[METHOD_areFocusTraversalKeysSet12] = new MethodDescriptor(java.awt.Container.class.getMethod("areFocusTraversalKeysSet", new Class[] {int.class})); // NOI18N
-            methods[METHOD_areFocusTraversalKeysSet12].setDisplayName ( "" );
-            methods[METHOD_bounds13] = new MethodDescriptor(java.awt.Component.class.getMethod("bounds", new Class[] {})); // NOI18N
-            methods[METHOD_bounds13].setDisplayName ( "" );
-            methods[METHOD_checkImage14] = new MethodDescriptor(java.awt.Component.class.getMethod("checkImage", new Class[] {java.awt.Image.class, java.awt.image.ImageObserver.class})); // NOI18N
-            methods[METHOD_checkImage14].setDisplayName ( "" );
-            methods[METHOD_checkImage15] = new MethodDescriptor(java.awt.Component.class.getMethod("checkImage", new Class[] {java.awt.Image.class, int.class, int.class, java.awt.image.ImageObserver.class})); // NOI18N
-            methods[METHOD_checkImage15].setDisplayName ( "" );
-            methods[METHOD_contains16] = new MethodDescriptor(java.awt.Component.class.getMethod("contains", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_contains16].setDisplayName ( "" );
-            methods[METHOD_contains17] = new MethodDescriptor(java.awt.Component.class.getMethod("contains", new Class[] {java.awt.Point.class})); // NOI18N
-            methods[METHOD_contains17].setDisplayName ( "" );
-            methods[METHOD_countComponents18] = new MethodDescriptor(java.awt.Container.class.getMethod("countComponents", new Class[] {})); // NOI18N
-            methods[METHOD_countComponents18].setDisplayName ( "" );
-            methods[METHOD_createBufferStrategy19] = new MethodDescriptor(java.awt.Window.class.getMethod("createBufferStrategy", new Class[] {int.class})); // NOI18N
-            methods[METHOD_createBufferStrategy19].setDisplayName ( "" );
-            methods[METHOD_createBufferStrategy20] = new MethodDescriptor(java.awt.Window.class.getMethod("createBufferStrategy", new Class[] {int.class, java.awt.BufferCapabilities.class})); // NOI18N
-            methods[METHOD_createBufferStrategy20].setDisplayName ( "" );
-            methods[METHOD_createImage21] = new MethodDescriptor(java.awt.Component.class.getMethod("createImage", new Class[] {java.awt.image.ImageProducer.class})); // NOI18N
-            methods[METHOD_createImage21].setDisplayName ( "" );
-            methods[METHOD_createImage22] = new MethodDescriptor(java.awt.Component.class.getMethod("createImage", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_createImage22].setDisplayName ( "" );
-            methods[METHOD_createVolatileImage23] = new MethodDescriptor(java.awt.Component.class.getMethod("createVolatileImage", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_createVolatileImage23].setDisplayName ( "" );
-            methods[METHOD_createVolatileImage24] = new MethodDescriptor(java.awt.Component.class.getMethod("createVolatileImage", new Class[] {int.class, int.class, java.awt.ImageCapabilities.class})); // NOI18N
-            methods[METHOD_createVolatileImage24].setDisplayName ( "" );
-            methods[METHOD_deliverEvent25] = new MethodDescriptor(java.awt.Container.class.getMethod("deliverEvent", new Class[] {java.awt.Event.class})); // NOI18N
-            methods[METHOD_deliverEvent25].setDisplayName ( "" );
-            methods[METHOD_disable26] = new MethodDescriptor(java.awt.Component.class.getMethod("disable", new Class[] {})); // NOI18N
-            methods[METHOD_disable26].setDisplayName ( "" );
-            methods[METHOD_dispatchEvent27] = new MethodDescriptor(java.awt.Component.class.getMethod("dispatchEvent", new Class[] {java.awt.AWTEvent.class})); // NOI18N
-            methods[METHOD_dispatchEvent27].setDisplayName ( "" );
-            methods[METHOD_dispose28] = new MethodDescriptor(java.awt.Window.class.getMethod("dispose", new Class[] {})); // NOI18N
-            methods[METHOD_dispose28].setDisplayName ( "" );
-            methods[METHOD_doLayout29] = new MethodDescriptor(java.awt.Container.class.getMethod("doLayout", new Class[] {})); // NOI18N
-            methods[METHOD_doLayout29].setDisplayName ( "" );
-            methods[METHOD_enable30] = new MethodDescriptor(java.awt.Component.class.getMethod("enable", new Class[] {})); // NOI18N
-            methods[METHOD_enable30].setDisplayName ( "" );
-            methods[METHOD_enable31] = new MethodDescriptor(java.awt.Component.class.getMethod("enable", new Class[] {boolean.class})); // NOI18N
-            methods[METHOD_enable31].setDisplayName ( "" );
-            methods[METHOD_enableInputMethods32] = new MethodDescriptor(java.awt.Component.class.getMethod("enableInputMethods", new Class[] {boolean.class})); // NOI18N
-            methods[METHOD_enableInputMethods32].setDisplayName ( "" );
-            methods[METHOD_findComponentAt33] = new MethodDescriptor(java.awt.Container.class.getMethod("findComponentAt", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_findComponentAt33].setDisplayName ( "" );
-            methods[METHOD_findComponentAt34] = new MethodDescriptor(java.awt.Container.class.getMethod("findComponentAt", new Class[] {java.awt.Point.class})); // NOI18N
-            methods[METHOD_findComponentAt34].setDisplayName ( "" );
-            methods[METHOD_firePropertyChange35] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", new Class[] {java.lang.String.class, byte.class, byte.class})); // NOI18N
-            methods[METHOD_firePropertyChange35].setDisplayName ( "" );
-            methods[METHOD_firePropertyChange36] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", new Class[] {java.lang.String.class, char.class, char.class})); // NOI18N
-            methods[METHOD_firePropertyChange36].setDisplayName ( "" );
-            methods[METHOD_firePropertyChange37] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", new Class[] {java.lang.String.class, short.class, short.class})); // NOI18N
-            methods[METHOD_firePropertyChange37].setDisplayName ( "" );
-            methods[METHOD_firePropertyChange38] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", new Class[] {java.lang.String.class, long.class, long.class})); // NOI18N
-            methods[METHOD_firePropertyChange38].setDisplayName ( "" );
-            methods[METHOD_firePropertyChange39] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", new Class[] {java.lang.String.class, float.class, float.class})); // NOI18N
-            methods[METHOD_firePropertyChange39].setDisplayName ( "" );
-            methods[METHOD_firePropertyChange40] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", new Class[] {java.lang.String.class, double.class, double.class})); // NOI18N
-            methods[METHOD_firePropertyChange40].setDisplayName ( "" );
-            methods[METHOD_getBaseline41] = new MethodDescriptor(java.awt.Component.class.getMethod("getBaseline", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_getBaseline41].setDisplayName ( "" );
-            methods[METHOD_getBounds42] = new MethodDescriptor(java.awt.Component.class.getMethod("getBounds", new Class[] {java.awt.Rectangle.class})); // NOI18N
-            methods[METHOD_getBounds42].setDisplayName ( "" );
-            methods[METHOD_getComponentAt43] = new MethodDescriptor(java.awt.Container.class.getMethod("getComponentAt", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_getComponentAt43].setDisplayName ( "" );
-            methods[METHOD_getComponentAt44] = new MethodDescriptor(java.awt.Container.class.getMethod("getComponentAt", new Class[] {java.awt.Point.class})); // NOI18N
-            methods[METHOD_getComponentAt44].setDisplayName ( "" );
-            methods[METHOD_getComponentZOrder45] = new MethodDescriptor(java.awt.Container.class.getMethod("getComponentZOrder", new Class[] {java.awt.Component.class})); // NOI18N
-            methods[METHOD_getComponentZOrder45].setDisplayName ( "" );
-            methods[METHOD_getCursor46] = new MethodDescriptor(java.awt.Component.class.getMethod("getCursor", new Class[] {})); // NOI18N
-            methods[METHOD_getCursor46].setDisplayName ( "" );
-            methods[METHOD_getFontMetrics47] = new MethodDescriptor(java.awt.Component.class.getMethod("getFontMetrics", new Class[] {java.awt.Font.class})); // NOI18N
-            methods[METHOD_getFontMetrics47].setDisplayName ( "" );
-            methods[METHOD_getFrames48] = new MethodDescriptor(java.awt.Frame.class.getMethod("getFrames", new Class[] {})); // NOI18N
-            methods[METHOD_getFrames48].setDisplayName ( "" );
-            methods[METHOD_getIconImages49] = new MethodDescriptor(java.awt.Window.class.getMethod("getIconImages", new Class[] {})); // NOI18N
-            methods[METHOD_getIconImages49].setDisplayName ( "" );
-            methods[METHOD_getListeners50] = new MethodDescriptor(java.awt.Window.class.getMethod("getListeners", new Class[] {java.lang.Class.class})); // NOI18N
-            methods[METHOD_getListeners50].setDisplayName ( "" );
-            methods[METHOD_getLocation51] = new MethodDescriptor(java.awt.Component.class.getMethod("getLocation", new Class[] {java.awt.Point.class})); // NOI18N
-            methods[METHOD_getLocation51].setDisplayName ( "" );
-            methods[METHOD_getMousePosition52] = new MethodDescriptor(java.awt.Container.class.getMethod("getMousePosition", new Class[] {boolean.class})); // NOI18N
-            methods[METHOD_getMousePosition52].setDisplayName ( "" );
-            methods[METHOD_getOwnerlessWindows53] = new MethodDescriptor(java.awt.Window.class.getMethod("getOwnerlessWindows", new Class[] {})); // NOI18N
-            methods[METHOD_getOwnerlessWindows53].setDisplayName ( "" );
-            methods[METHOD_getPropertyChangeListeners54] = new MethodDescriptor(java.awt.Component.class.getMethod("getPropertyChangeListeners", new Class[] {java.lang.String.class})); // NOI18N
-            methods[METHOD_getPropertyChangeListeners54].setDisplayName ( "" );
-            methods[METHOD_getSize55] = new MethodDescriptor(java.awt.Component.class.getMethod("getSize", new Class[] {java.awt.Dimension.class})); // NOI18N
-            methods[METHOD_getSize55].setDisplayName ( "" );
-            methods[METHOD_getWindows56] = new MethodDescriptor(java.awt.Window.class.getMethod("getWindows", new Class[] {})); // NOI18N
-            methods[METHOD_getWindows56].setDisplayName ( "" );
-            methods[METHOD_gotFocus57] = new MethodDescriptor(java.awt.Component.class.getMethod("gotFocus", new Class[] {java.awt.Event.class, java.lang.Object.class})); // NOI18N
-            methods[METHOD_gotFocus57].setDisplayName ( "" );
-            methods[METHOD_handleEvent58] = new MethodDescriptor(java.awt.Component.class.getMethod("handleEvent", new Class[] {java.awt.Event.class})); // NOI18N
-            methods[METHOD_handleEvent58].setDisplayName ( "" );
-            methods[METHOD_hasFocus59] = new MethodDescriptor(java.awt.Component.class.getMethod("hasFocus", new Class[] {})); // NOI18N
-            methods[METHOD_hasFocus59].setDisplayName ( "" );
-            methods[METHOD_hide60] = new MethodDescriptor(java.awt.Window.class.getMethod("hide", new Class[] {})); // NOI18N
-            methods[METHOD_hide60].setDisplayName ( "" );
-            methods[METHOD_imageUpdate61] = new MethodDescriptor(java.awt.Component.class.getMethod("imageUpdate", new Class[] {java.awt.Image.class, int.class, int.class, int.class, int.class, int.class})); // NOI18N
-            methods[METHOD_imageUpdate61].setDisplayName ( "" );
-            methods[METHOD_insets62] = new MethodDescriptor(java.awt.Container.class.getMethod("insets", new Class[] {})); // NOI18N
-            methods[METHOD_insets62].setDisplayName ( "" );
-            methods[METHOD_inside63] = new MethodDescriptor(java.awt.Component.class.getMethod("inside", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_inside63].setDisplayName ( "" );
-            methods[METHOD_invalidate64] = new MethodDescriptor(java.awt.Container.class.getMethod("invalidate", new Class[] {})); // NOI18N
-            methods[METHOD_invalidate64].setDisplayName ( "" );
-            methods[METHOD_isAncestorOf65] = new MethodDescriptor(java.awt.Container.class.getMethod("isAncestorOf", new Class[] {java.awt.Component.class})); // NOI18N
-            methods[METHOD_isAncestorOf65].setDisplayName ( "" );
-            methods[METHOD_isDefaultLookAndFeelDecorated66] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("isDefaultLookAndFeelDecorated", new Class[] {})); // NOI18N
-            methods[METHOD_isDefaultLookAndFeelDecorated66].setDisplayName ( "" );
-            methods[METHOD_isFocusCycleRoot67] = new MethodDescriptor(java.awt.Container.class.getMethod("isFocusCycleRoot", new Class[] {java.awt.Container.class})); // NOI18N
-            methods[METHOD_isFocusCycleRoot67].setDisplayName ( "" );
-            methods[METHOD_isFocusOwner68] = new MethodDescriptor(java.awt.Component.class.getMethod("isFocusOwner", new Class[] {})); // NOI18N
-            methods[METHOD_isFocusOwner68].setDisplayName ( "" );
-            methods[METHOD_keyDown69] = new MethodDescriptor(java.awt.Component.class.getMethod("keyDown", new Class[] {java.awt.Event.class, int.class})); // NOI18N
-            methods[METHOD_keyDown69].setDisplayName ( "" );
-            methods[METHOD_keyUp70] = new MethodDescriptor(java.awt.Component.class.getMethod("keyUp", new Class[] {java.awt.Event.class, int.class})); // NOI18N
-            methods[METHOD_keyUp70].setDisplayName ( "" );
-            methods[METHOD_layout71] = new MethodDescriptor(java.awt.Container.class.getMethod("layout", new Class[] {})); // NOI18N
-            methods[METHOD_layout71].setDisplayName ( "" );
-            methods[METHOD_list72] = new MethodDescriptor(java.awt.Component.class.getMethod("list", new Class[] {})); // NOI18N
-            methods[METHOD_list72].setDisplayName ( "" );
-            methods[METHOD_list73] = new MethodDescriptor(java.awt.Component.class.getMethod("list", new Class[] {java.io.PrintStream.class})); // NOI18N
-            methods[METHOD_list73].setDisplayName ( "" );
-            methods[METHOD_list74] = new MethodDescriptor(java.awt.Component.class.getMethod("list", new Class[] {java.io.PrintWriter.class})); // NOI18N
-            methods[METHOD_list74].setDisplayName ( "" );
-            methods[METHOD_list75] = new MethodDescriptor(java.awt.Container.class.getMethod("list", new Class[] {java.io.PrintStream.class, int.class})); // NOI18N
-            methods[METHOD_list75].setDisplayName ( "" );
-            methods[METHOD_list76] = new MethodDescriptor(java.awt.Container.class.getMethod("list", new Class[] {java.io.PrintWriter.class, int.class})); // NOI18N
-            methods[METHOD_list76].setDisplayName ( "" );
-            methods[METHOD_locate77] = new MethodDescriptor(java.awt.Container.class.getMethod("locate", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_locate77].setDisplayName ( "" );
-            methods[METHOD_location78] = new MethodDescriptor(java.awt.Component.class.getMethod("location", new Class[] {})); // NOI18N
-            methods[METHOD_location78].setDisplayName ( "" );
-            methods[METHOD_lostFocus79] = new MethodDescriptor(java.awt.Component.class.getMethod("lostFocus", new Class[] {java.awt.Event.class, java.lang.Object.class})); // NOI18N
-            methods[METHOD_lostFocus79].setDisplayName ( "" );
-            methods[METHOD_main80] = new MethodDescriptor(com.Dryft.gui.SignIn.class.getMethod("main", new Class[] {java.lang.String[].class})); // NOI18N
-            methods[METHOD_main80].setDisplayName ( "" );
-            methods[METHOD_minimumSize81] = new MethodDescriptor(java.awt.Container.class.getMethod("minimumSize", new Class[] {})); // NOI18N
-            methods[METHOD_minimumSize81].setDisplayName ( "" );
-            methods[METHOD_mouseDown82] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseDown", new Class[] {java.awt.Event.class, int.class, int.class})); // NOI18N
-            methods[METHOD_mouseDown82].setDisplayName ( "" );
-            methods[METHOD_mouseDrag83] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseDrag", new Class[] {java.awt.Event.class, int.class, int.class})); // NOI18N
-            methods[METHOD_mouseDrag83].setDisplayName ( "" );
-            methods[METHOD_mouseEnter84] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseEnter", new Class[] {java.awt.Event.class, int.class, int.class})); // NOI18N
-            methods[METHOD_mouseEnter84].setDisplayName ( "" );
-            methods[METHOD_mouseExit85] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseExit", new Class[] {java.awt.Event.class, int.class, int.class})); // NOI18N
-            methods[METHOD_mouseExit85].setDisplayName ( "" );
-            methods[METHOD_mouseMove86] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseMove", new Class[] {java.awt.Event.class, int.class, int.class})); // NOI18N
-            methods[METHOD_mouseMove86].setDisplayName ( "" );
-            methods[METHOD_mouseUp87] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseUp", new Class[] {java.awt.Event.class, int.class, int.class})); // NOI18N
-            methods[METHOD_mouseUp87].setDisplayName ( "" );
-            methods[METHOD_move88] = new MethodDescriptor(java.awt.Component.class.getMethod("move", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_move88].setDisplayName ( "" );
-            methods[METHOD_nextFocus89] = new MethodDescriptor(java.awt.Component.class.getMethod("nextFocus", new Class[] {})); // NOI18N
-            methods[METHOD_nextFocus89].setDisplayName ( "" );
-            methods[METHOD_pack90] = new MethodDescriptor(java.awt.Window.class.getMethod("pack", new Class[] {})); // NOI18N
-            methods[METHOD_pack90].setDisplayName ( "" );
-            methods[METHOD_paint91] = new MethodDescriptor(java.awt.Window.class.getMethod("paint", new Class[] {java.awt.Graphics.class})); // NOI18N
-            methods[METHOD_paint91].setDisplayName ( "" );
-            methods[METHOD_paintAll92] = new MethodDescriptor(java.awt.Component.class.getMethod("paintAll", new Class[] {java.awt.Graphics.class})); // NOI18N
-            methods[METHOD_paintAll92].setDisplayName ( "" );
-            methods[METHOD_paintComponents93] = new MethodDescriptor(java.awt.Container.class.getMethod("paintComponents", new Class[] {java.awt.Graphics.class})); // NOI18N
-            methods[METHOD_paintComponents93].setDisplayName ( "" );
-            methods[METHOD_postEvent94] = new MethodDescriptor(java.awt.Window.class.getMethod("postEvent", new Class[] {java.awt.Event.class})); // NOI18N
-            methods[METHOD_postEvent94].setDisplayName ( "" );
-            methods[METHOD_preferredSize95] = new MethodDescriptor(java.awt.Container.class.getMethod("preferredSize", new Class[] {})); // NOI18N
-            methods[METHOD_preferredSize95].setDisplayName ( "" );
-            methods[METHOD_prepareImage96] = new MethodDescriptor(java.awt.Component.class.getMethod("prepareImage", new Class[] {java.awt.Image.class, java.awt.image.ImageObserver.class})); // NOI18N
-            methods[METHOD_prepareImage96].setDisplayName ( "" );
-            methods[METHOD_prepareImage97] = new MethodDescriptor(java.awt.Component.class.getMethod("prepareImage", new Class[] {java.awt.Image.class, int.class, int.class, java.awt.image.ImageObserver.class})); // NOI18N
-            methods[METHOD_prepareImage97].setDisplayName ( "" );
-            methods[METHOD_print98] = new MethodDescriptor(java.awt.Container.class.getMethod("print", new Class[] {java.awt.Graphics.class})); // NOI18N
-            methods[METHOD_print98].setDisplayName ( "" );
-            methods[METHOD_printAll99] = new MethodDescriptor(java.awt.Component.class.getMethod("printAll", new Class[] {java.awt.Graphics.class})); // NOI18N
-            methods[METHOD_printAll99].setDisplayName ( "" );
-            methods[METHOD_printComponents100] = new MethodDescriptor(java.awt.Container.class.getMethod("printComponents", new Class[] {java.awt.Graphics.class})); // NOI18N
-            methods[METHOD_printComponents100].setDisplayName ( "" );
-            methods[METHOD_remove101] = new MethodDescriptor(java.awt.Container.class.getMethod("remove", new Class[] {int.class})); // NOI18N
-            methods[METHOD_remove101].setDisplayName ( "" );
-            methods[METHOD_remove102] = new MethodDescriptor(java.awt.Frame.class.getMethod("remove", new Class[] {java.awt.MenuComponent.class})); // NOI18N
-            methods[METHOD_remove102].setDisplayName ( "" );
-            methods[METHOD_remove103] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("remove", new Class[] {java.awt.Component.class})); // NOI18N
-            methods[METHOD_remove103].setDisplayName ( "" );
-            methods[METHOD_removeAll104] = new MethodDescriptor(java.awt.Container.class.getMethod("removeAll", new Class[] {})); // NOI18N
-            methods[METHOD_removeAll104].setDisplayName ( "" );
-            methods[METHOD_removeNotify105] = new MethodDescriptor(java.awt.Frame.class.getMethod("removeNotify", new Class[] {})); // NOI18N
-            methods[METHOD_removeNotify105].setDisplayName ( "" );
-            methods[METHOD_removePropertyChangeListener106] = new MethodDescriptor(java.awt.Component.class.getMethod("removePropertyChangeListener", new Class[] {java.lang.String.class, java.beans.PropertyChangeListener.class})); // NOI18N
-            methods[METHOD_removePropertyChangeListener106].setDisplayName ( "" );
-            methods[METHOD_repaint107] = new MethodDescriptor(java.awt.Component.class.getMethod("repaint", new Class[] {})); // NOI18N
-            methods[METHOD_repaint107].setDisplayName ( "" );
-            methods[METHOD_repaint108] = new MethodDescriptor(java.awt.Component.class.getMethod("repaint", new Class[] {long.class})); // NOI18N
-            methods[METHOD_repaint108].setDisplayName ( "" );
-            methods[METHOD_repaint109] = new MethodDescriptor(java.awt.Component.class.getMethod("repaint", new Class[] {int.class, int.class, int.class, int.class})); // NOI18N
-            methods[METHOD_repaint109].setDisplayName ( "" );
-            methods[METHOD_repaint110] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("repaint", new Class[] {long.class, int.class, int.class, int.class, int.class})); // NOI18N
-            methods[METHOD_repaint110].setDisplayName ( "" );
-            methods[METHOD_requestFocus111] = new MethodDescriptor(java.awt.Component.class.getMethod("requestFocus", new Class[] {})); // NOI18N
-            methods[METHOD_requestFocus111].setDisplayName ( "" );
-            methods[METHOD_requestFocusInWindow112] = new MethodDescriptor(java.awt.Component.class.getMethod("requestFocusInWindow", new Class[] {})); // NOI18N
-            methods[METHOD_requestFocusInWindow112].setDisplayName ( "" );
-            methods[METHOD_reshape113] = new MethodDescriptor(java.awt.Window.class.getMethod("reshape", new Class[] {int.class, int.class, int.class, int.class})); // NOI18N
-            methods[METHOD_reshape113].setDisplayName ( "" );
-            methods[METHOD_resize114] = new MethodDescriptor(java.awt.Component.class.getMethod("resize", new Class[] {int.class, int.class})); // NOI18N
-            methods[METHOD_resize114].setDisplayName ( "" );
-            methods[METHOD_resize115] = new MethodDescriptor(java.awt.Component.class.getMethod("resize", new Class[] {java.awt.Dimension.class})); // NOI18N
-            methods[METHOD_resize115].setDisplayName ( "" );
-            methods[METHOD_revalidate116] = new MethodDescriptor(java.awt.Component.class.getMethod("revalidate", new Class[] {})); // NOI18N
-            methods[METHOD_revalidate116].setDisplayName ( "" );
-            methods[METHOD_setBounds117] = new MethodDescriptor(java.awt.Window.class.getMethod("setBounds", new Class[] {int.class, int.class, int.class, int.class})); // NOI18N
-            methods[METHOD_setBounds117].setDisplayName ( "" );
-            methods[METHOD_setComponentZOrder118] = new MethodDescriptor(java.awt.Container.class.getMethod("setComponentZOrder", new Class[] {java.awt.Component.class, int.class})); // NOI18N
-            methods[METHOD_setComponentZOrder118].setDisplayName ( "" );
-            methods[METHOD_setCursor119] = new MethodDescriptor(java.awt.Window.class.getMethod("setCursor", new Class[] {java.awt.Cursor.class})); // NOI18N
-            methods[METHOD_setCursor119].setDisplayName ( "" );
-            methods[METHOD_setDefaultLookAndFeelDecorated120] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("setDefaultLookAndFeelDecorated", new Class[] {boolean.class})); // NOI18N
-            methods[METHOD_setDefaultLookAndFeelDecorated120].setDisplayName ( "" );
-            methods[METHOD_setFocusTraversalKeys121] = new MethodDescriptor(java.awt.Container.class.getMethod("setFocusTraversalKeys", new Class[] {int.class, java.util.Set.class})); // NOI18N
-            methods[METHOD_setFocusTraversalKeys121].setDisplayName ( "" );
-            methods[METHOD_show122] = new MethodDescriptor(java.awt.Component.class.getMethod("show", new Class[] {boolean.class})); // NOI18N
-            methods[METHOD_show122].setDisplayName ( "" );
-            methods[METHOD_show123] = new MethodDescriptor(java.awt.Window.class.getMethod("show", new Class[] {})); // NOI18N
-            methods[METHOD_show123].setDisplayName ( "" );
-            methods[METHOD_size124] = new MethodDescriptor(java.awt.Component.class.getMethod("size", new Class[] {})); // NOI18N
-            methods[METHOD_size124].setDisplayName ( "" );
-            methods[METHOD_toBack125] = new MethodDescriptor(java.awt.Window.class.getMethod("toBack", new Class[] {})); // NOI18N
-            methods[METHOD_toBack125].setDisplayName ( "" );
-            methods[METHOD_toFront126] = new MethodDescriptor(java.awt.Window.class.getMethod("toFront", new Class[] {})); // NOI18N
-            methods[METHOD_toFront126].setDisplayName ( "" );
-            methods[METHOD_toString127] = new MethodDescriptor(java.awt.Component.class.getMethod("toString", new Class[] {})); // NOI18N
-            methods[METHOD_toString127].setDisplayName ( "" );
-            methods[METHOD_transferFocus128] = new MethodDescriptor(java.awt.Component.class.getMethod("transferFocus", new Class[] {})); // NOI18N
-            methods[METHOD_transferFocus128].setDisplayName ( "" );
-            methods[METHOD_transferFocusBackward129] = new MethodDescriptor(java.awt.Component.class.getMethod("transferFocusBackward", new Class[] {})); // NOI18N
-            methods[METHOD_transferFocusBackward129].setDisplayName ( "" );
-            methods[METHOD_transferFocusDownCycle130] = new MethodDescriptor(java.awt.Container.class.getMethod("transferFocusDownCycle", new Class[] {})); // NOI18N
-            methods[METHOD_transferFocusDownCycle130].setDisplayName ( "" );
-            methods[METHOD_transferFocusUpCycle131] = new MethodDescriptor(java.awt.Component.class.getMethod("transferFocusUpCycle", new Class[] {})); // NOI18N
-            methods[METHOD_transferFocusUpCycle131].setDisplayName ( "" );
-            methods[METHOD_update132] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("update", new Class[] {java.awt.Graphics.class})); // NOI18N
-            methods[METHOD_update132].setDisplayName ( "" );
-            methods[METHOD_validate133] = new MethodDescriptor(java.awt.Container.class.getMethod("validate", new Class[] {})); // NOI18N
-            methods[METHOD_validate133].setDisplayName ( "" );
-        }
-        catch( Exception e) {}//GEN-HEADEREND:Methods
-        // Here you can add code for customizing the methods array.
-
-        return methods;     }//GEN-LAST:Methods
-
+    private static final int defaultPropertyIndex = -1;//GEN-BEGIN:Idx
+    private static final int defaultEventIndex = -1;//GEN-END:Idx
     private static java.awt.Image iconColor16 = null;//GEN-BEGIN:IconsDef
     private static java.awt.Image iconColor32 = null;
     private static java.awt.Image iconMono16 = null;
@@ -734,12 +288,456 @@ public class SignInBeanInfo extends SimpleBeanInfo {
     private static String iconNameM16 = null;
     private static String iconNameM32 = null;//GEN-END:Icons
 
-    private static final int defaultPropertyIndex = -1;//GEN-BEGIN:Idx
-    private static final int defaultEventIndex = -1;//GEN-END:Idx
+    // Bean descriptor//GEN-FIRST:BeanDescriptor
+    /*lazy BeanDescriptor*/
+    private static BeanDescriptor getBdescriptor() {
+        BeanDescriptor beanDescriptor = new BeanDescriptor(com.Dryft.gui.SignIn.class, null); // NOI18N//GEN-HEADEREND:BeanDescriptor
+        // Here you can add code for customizing the BeanDescriptor.
+
+        return beanDescriptor;
+    }//GEN-LAST:BeanDescriptor
+
+    // Property array
+    /*lazy PropertyDescriptor*/
+    private static PropertyDescriptor[] getPdescriptor() {
+        PropertyDescriptor[] properties = new PropertyDescriptor[114];
+
+        try {
+            properties[PROPERTY_accessibleContext] = new PropertyDescriptor("accessibleContext", com.Dryft.gui.SignIn.class, "getAccessibleContext", null); // NOI18N
+            properties[PROPERTY_active] = new PropertyDescriptor("active", com.Dryft.gui.SignIn.class, "isActive", null); // NOI18N
+            properties[PROPERTY_alignmentX] = new PropertyDescriptor("alignmentX", com.Dryft.gui.SignIn.class, "getAlignmentX", null); // NOI18N
+            properties[PROPERTY_alignmentY] = new PropertyDescriptor("alignmentY", com.Dryft.gui.SignIn.class, "getAlignmentY", null); // NOI18N
+            properties[PROPERTY_alwaysOnTop] = new PropertyDescriptor("alwaysOnTop", com.Dryft.gui.SignIn.class, "isAlwaysOnTop", "setAlwaysOnTop"); // NOI18N
+            properties[PROPERTY_alwaysOnTopSupported] = new PropertyDescriptor("alwaysOnTopSupported", com.Dryft.gui.SignIn.class, "isAlwaysOnTopSupported", null); // NOI18N
+            properties[PROPERTY_autoRequestFocus] = new PropertyDescriptor("autoRequestFocus", com.Dryft.gui.SignIn.class, "isAutoRequestFocus", "setAutoRequestFocus"); // NOI18N
+            properties[PROPERTY_background] = new PropertyDescriptor("background", com.Dryft.gui.SignIn.class, "getBackground", "setBackground"); // NOI18N
+            properties[PROPERTY_backgroundSet] = new PropertyDescriptor("backgroundSet", com.Dryft.gui.SignIn.class, "isBackgroundSet", null); // NOI18N
+            properties[PROPERTY_baselineResizeBehavior] = new PropertyDescriptor("baselineResizeBehavior", com.Dryft.gui.SignIn.class, "getBaselineResizeBehavior", null); // NOI18N
+            properties[PROPERTY_bounds] = new PropertyDescriptor("bounds", com.Dryft.gui.SignIn.class, "getBounds", "setBounds"); // NOI18N
+            properties[PROPERTY_bufferStrategy] = new PropertyDescriptor("bufferStrategy", com.Dryft.gui.SignIn.class, "getBufferStrategy", null); // NOI18N
+            properties[PROPERTY_colorModel] = new PropertyDescriptor("colorModel", com.Dryft.gui.SignIn.class, "getColorModel", null); // NOI18N
+            properties[PROPERTY_component] = new IndexedPropertyDescriptor("component", com.Dryft.gui.SignIn.class, null, null, "getComponent", null); // NOI18N
+            properties[PROPERTY_componentCount] = new PropertyDescriptor("componentCount", com.Dryft.gui.SignIn.class, "getComponentCount", null); // NOI18N
+            properties[PROPERTY_componentListeners] = new PropertyDescriptor("componentListeners", com.Dryft.gui.SignIn.class, "getComponentListeners", null); // NOI18N
+            properties[PROPERTY_componentOrientation] = new PropertyDescriptor("componentOrientation", com.Dryft.gui.SignIn.class, "getComponentOrientation", "setComponentOrientation"); // NOI18N
+            properties[PROPERTY_components] = new PropertyDescriptor("components", com.Dryft.gui.SignIn.class, "getComponents", null); // NOI18N
+            properties[PROPERTY_containerListeners] = new PropertyDescriptor("containerListeners", com.Dryft.gui.SignIn.class, "getContainerListeners", null); // NOI18N
+            properties[PROPERTY_contentPane] = new PropertyDescriptor("contentPane", com.Dryft.gui.SignIn.class, "getContentPane", "setContentPane"); // NOI18N
+            properties[PROPERTY_cursor] = new PropertyDescriptor("cursor", com.Dryft.gui.SignIn.class, null, "setCursor"); // NOI18N
+            properties[PROPERTY_cursorSet] = new PropertyDescriptor("cursorSet", com.Dryft.gui.SignIn.class, "isCursorSet", null); // NOI18N
+            properties[PROPERTY_cursorType] = new PropertyDescriptor("cursorType", com.Dryft.gui.SignIn.class, "getCursorType", null); // NOI18N
+            properties[PROPERTY_defaultCloseOperation] = new PropertyDescriptor("defaultCloseOperation", com.Dryft.gui.SignIn.class, "getDefaultCloseOperation", "setDefaultCloseOperation"); // NOI18N
+            properties[PROPERTY_displayable] = new PropertyDescriptor("displayable", com.Dryft.gui.SignIn.class, "isDisplayable", null); // NOI18N
+            properties[PROPERTY_doubleBuffered] = new PropertyDescriptor("doubleBuffered", com.Dryft.gui.SignIn.class, "isDoubleBuffered", null); // NOI18N
+            properties[PROPERTY_dropTarget] = new PropertyDescriptor("dropTarget", com.Dryft.gui.SignIn.class, "getDropTarget", "setDropTarget"); // NOI18N
+            properties[PROPERTY_enabled] = new PropertyDescriptor("enabled", com.Dryft.gui.SignIn.class, "isEnabled", "setEnabled"); // NOI18N
+            properties[PROPERTY_extendedState] = new PropertyDescriptor("extendedState", com.Dryft.gui.SignIn.class, "getExtendedState", "setExtendedState"); // NOI18N
+            properties[PROPERTY_focusable] = new PropertyDescriptor("focusable", com.Dryft.gui.SignIn.class, "isFocusable", "setFocusable"); // NOI18N
+            properties[PROPERTY_focusableWindow] = new PropertyDescriptor("focusableWindow", com.Dryft.gui.SignIn.class, "isFocusableWindow", null); // NOI18N
+            properties[PROPERTY_focusableWindowState] = new PropertyDescriptor("focusableWindowState", com.Dryft.gui.SignIn.class, "getFocusableWindowState", "setFocusableWindowState"); // NOI18N
+            properties[PROPERTY_focusCycleRoot] = new PropertyDescriptor("focusCycleRoot", com.Dryft.gui.SignIn.class, "isFocusCycleRoot", "setFocusCycleRoot"); // NOI18N
+            properties[PROPERTY_focusCycleRootAncestor] = new PropertyDescriptor("focusCycleRootAncestor", com.Dryft.gui.SignIn.class, "getFocusCycleRootAncestor", null); // NOI18N
+            properties[PROPERTY_focused] = new PropertyDescriptor("focused", com.Dryft.gui.SignIn.class, "isFocused", null); // NOI18N
+            properties[PROPERTY_focusListeners] = new PropertyDescriptor("focusListeners", com.Dryft.gui.SignIn.class, "getFocusListeners", null); // NOI18N
+            properties[PROPERTY_focusOwner] = new PropertyDescriptor("focusOwner", com.Dryft.gui.SignIn.class, "getFocusOwner", null); // NOI18N
+            properties[PROPERTY_focusTraversable] = new PropertyDescriptor("focusTraversable", com.Dryft.gui.SignIn.class, "isFocusTraversable", null); // NOI18N
+            properties[PROPERTY_focusTraversalKeys] = new IndexedPropertyDescriptor("focusTraversalKeys", com.Dryft.gui.SignIn.class, null, null, "getFocusTraversalKeys", null); // NOI18N
+            properties[PROPERTY_focusTraversalKeysEnabled] = new PropertyDescriptor("focusTraversalKeysEnabled", com.Dryft.gui.SignIn.class, "getFocusTraversalKeysEnabled", "setFocusTraversalKeysEnabled"); // NOI18N
+            properties[PROPERTY_focusTraversalPolicy] = new PropertyDescriptor("focusTraversalPolicy", com.Dryft.gui.SignIn.class, "getFocusTraversalPolicy", "setFocusTraversalPolicy"); // NOI18N
+            properties[PROPERTY_focusTraversalPolicyProvider] = new PropertyDescriptor("focusTraversalPolicyProvider", com.Dryft.gui.SignIn.class, "isFocusTraversalPolicyProvider", "setFocusTraversalPolicyProvider"); // NOI18N
+            properties[PROPERTY_focusTraversalPolicySet] = new PropertyDescriptor("focusTraversalPolicySet", com.Dryft.gui.SignIn.class, "isFocusTraversalPolicySet", null); // NOI18N
+            properties[PROPERTY_font] = new PropertyDescriptor("font", com.Dryft.gui.SignIn.class, "getFont", "setFont"); // NOI18N
+            properties[PROPERTY_fontSet] = new PropertyDescriptor("fontSet", com.Dryft.gui.SignIn.class, "isFontSet", null); // NOI18N
+            properties[PROPERTY_foreground] = new PropertyDescriptor("foreground", com.Dryft.gui.SignIn.class, "getForeground", "setForeground"); // NOI18N
+            properties[PROPERTY_foregroundSet] = new PropertyDescriptor("foregroundSet", com.Dryft.gui.SignIn.class, "isForegroundSet", null); // NOI18N
+            properties[PROPERTY_glassPane] = new PropertyDescriptor("glassPane", com.Dryft.gui.SignIn.class, "getGlassPane", "setGlassPane"); // NOI18N
+            properties[PROPERTY_graphics] = new PropertyDescriptor("graphics", com.Dryft.gui.SignIn.class, "getGraphics", null); // NOI18N
+            properties[PROPERTY_graphicsConfiguration] = new PropertyDescriptor("graphicsConfiguration", com.Dryft.gui.SignIn.class, "getGraphicsConfiguration", null); // NOI18N
+            properties[PROPERTY_height] = new PropertyDescriptor("height", com.Dryft.gui.SignIn.class, "getHeight", null); // NOI18N
+            properties[PROPERTY_hierarchyBoundsListeners] = new PropertyDescriptor("hierarchyBoundsListeners", com.Dryft.gui.SignIn.class, "getHierarchyBoundsListeners", null); // NOI18N
+            properties[PROPERTY_hierarchyListeners] = new PropertyDescriptor("hierarchyListeners", com.Dryft.gui.SignIn.class, "getHierarchyListeners", null); // NOI18N
+            properties[PROPERTY_iconImage] = new PropertyDescriptor("iconImage", com.Dryft.gui.SignIn.class, "getIconImage", "setIconImage"); // NOI18N
+            properties[PROPERTY_iconImages] = new PropertyDescriptor("iconImages", com.Dryft.gui.SignIn.class, null, "setIconImages"); // NOI18N
+            properties[PROPERTY_ignoreRepaint] = new PropertyDescriptor("ignoreRepaint", com.Dryft.gui.SignIn.class, "getIgnoreRepaint", "setIgnoreRepaint"); // NOI18N
+            properties[PROPERTY_inputContext] = new PropertyDescriptor("inputContext", com.Dryft.gui.SignIn.class, "getInputContext", null); // NOI18N
+            properties[PROPERTY_inputMethodListeners] = new PropertyDescriptor("inputMethodListeners", com.Dryft.gui.SignIn.class, "getInputMethodListeners", null); // NOI18N
+            properties[PROPERTY_inputMethodRequests] = new PropertyDescriptor("inputMethodRequests", com.Dryft.gui.SignIn.class, "getInputMethodRequests", null); // NOI18N
+            properties[PROPERTY_insets] = new PropertyDescriptor("insets", com.Dryft.gui.SignIn.class, "getInsets", null); // NOI18N
+            properties[PROPERTY_JMenuBar] = new PropertyDescriptor("JMenuBar", com.Dryft.gui.SignIn.class, "getJMenuBar", "setJMenuBar"); // NOI18N
+            properties[PROPERTY_keyListeners] = new PropertyDescriptor("keyListeners", com.Dryft.gui.SignIn.class, "getKeyListeners", null); // NOI18N
+            properties[PROPERTY_layeredPane] = new PropertyDescriptor("layeredPane", com.Dryft.gui.SignIn.class, "getLayeredPane", "setLayeredPane"); // NOI18N
+            properties[PROPERTY_layout] = new PropertyDescriptor("layout", com.Dryft.gui.SignIn.class, "getLayout", "setLayout"); // NOI18N
+            properties[PROPERTY_lightweight] = new PropertyDescriptor("lightweight", com.Dryft.gui.SignIn.class, "isLightweight", null); // NOI18N
+            properties[PROPERTY_locale] = new PropertyDescriptor("locale", com.Dryft.gui.SignIn.class, "getLocale", "setLocale"); // NOI18N
+            properties[PROPERTY_location] = new PropertyDescriptor("location", com.Dryft.gui.SignIn.class, "getLocation", "setLocation"); // NOI18N
+            properties[PROPERTY_locationByPlatform] = new PropertyDescriptor("locationByPlatform", com.Dryft.gui.SignIn.class, "isLocationByPlatform", "setLocationByPlatform"); // NOI18N
+            properties[PROPERTY_locationOnScreen] = new PropertyDescriptor("locationOnScreen", com.Dryft.gui.SignIn.class, "getLocationOnScreen", null); // NOI18N
+            properties[PROPERTY_locationRelativeTo] = new PropertyDescriptor("locationRelativeTo", com.Dryft.gui.SignIn.class, null, "setLocationRelativeTo"); // NOI18N
+            properties[PROPERTY_maximizedBounds] = new PropertyDescriptor("maximizedBounds", com.Dryft.gui.SignIn.class, "getMaximizedBounds", "setMaximizedBounds"); // NOI18N
+            properties[PROPERTY_maximumSize] = new PropertyDescriptor("maximumSize", com.Dryft.gui.SignIn.class, "getMaximumSize", "setMaximumSize"); // NOI18N
+            properties[PROPERTY_maximumSizeSet] = new PropertyDescriptor("maximumSizeSet", com.Dryft.gui.SignIn.class, "isMaximumSizeSet", null); // NOI18N
+            properties[PROPERTY_menuBar] = new PropertyDescriptor("menuBar", com.Dryft.gui.SignIn.class, "getMenuBar", "setMenuBar"); // NOI18N
+            properties[PROPERTY_minimumSize] = new PropertyDescriptor("minimumSize", com.Dryft.gui.SignIn.class, "getMinimumSize", "setMinimumSize"); // NOI18N
+            properties[PROPERTY_minimumSizeSet] = new PropertyDescriptor("minimumSizeSet", com.Dryft.gui.SignIn.class, "isMinimumSizeSet", null); // NOI18N
+            properties[PROPERTY_modalExclusionType] = new PropertyDescriptor("modalExclusionType", com.Dryft.gui.SignIn.class, "getModalExclusionType", "setModalExclusionType"); // NOI18N
+            properties[PROPERTY_mostRecentFocusOwner] = new PropertyDescriptor("mostRecentFocusOwner", com.Dryft.gui.SignIn.class, "getMostRecentFocusOwner", null); // NOI18N
+            properties[PROPERTY_mouseListeners] = new PropertyDescriptor("mouseListeners", com.Dryft.gui.SignIn.class, "getMouseListeners", null); // NOI18N
+            properties[PROPERTY_mouseMotionListeners] = new PropertyDescriptor("mouseMotionListeners", com.Dryft.gui.SignIn.class, "getMouseMotionListeners", null); // NOI18N
+            properties[PROPERTY_mousePosition] = new PropertyDescriptor("mousePosition", com.Dryft.gui.SignIn.class, "getMousePosition", null); // NOI18N
+            properties[PROPERTY_mouseWheelListeners] = new PropertyDescriptor("mouseWheelListeners", com.Dryft.gui.SignIn.class, "getMouseWheelListeners", null); // NOI18N
+            properties[PROPERTY_name] = new PropertyDescriptor("name", com.Dryft.gui.SignIn.class, "getName", "setName"); // NOI18N
+            properties[PROPERTY_opacity] = new PropertyDescriptor("opacity", com.Dryft.gui.SignIn.class, "getOpacity", "setOpacity"); // NOI18N
+            properties[PROPERTY_opaque] = new PropertyDescriptor("opaque", com.Dryft.gui.SignIn.class, "isOpaque", null); // NOI18N
+            properties[PROPERTY_ownedWindows] = new PropertyDescriptor("ownedWindows", com.Dryft.gui.SignIn.class, "getOwnedWindows", null); // NOI18N
+            properties[PROPERTY_owner] = new PropertyDescriptor("owner", com.Dryft.gui.SignIn.class, "getOwner", null); // NOI18N
+            properties[PROPERTY_parent] = new PropertyDescriptor("parent", com.Dryft.gui.SignIn.class, "getParent", null); // NOI18N
+            properties[PROPERTY_peer] = new PropertyDescriptor("peer", com.Dryft.gui.SignIn.class, "getPeer", null); // NOI18N
+            properties[PROPERTY_preferredSize] = new PropertyDescriptor("preferredSize", com.Dryft.gui.SignIn.class, "getPreferredSize", "setPreferredSize"); // NOI18N
+            properties[PROPERTY_preferredSizeSet] = new PropertyDescriptor("preferredSizeSet", com.Dryft.gui.SignIn.class, "isPreferredSizeSet", null); // NOI18N
+            properties[PROPERTY_propertyChangeListeners] = new PropertyDescriptor("propertyChangeListeners", com.Dryft.gui.SignIn.class, "getPropertyChangeListeners", null); // NOI18N
+            properties[PROPERTY_resizable] = new PropertyDescriptor("resizable", com.Dryft.gui.SignIn.class, "isResizable", "setResizable"); // NOI18N
+            properties[PROPERTY_rootPane] = new PropertyDescriptor("rootPane", com.Dryft.gui.SignIn.class, "getRootPane", null); // NOI18N
+            properties[PROPERTY_shape] = new PropertyDescriptor("shape", com.Dryft.gui.SignIn.class, "getShape", "setShape"); // NOI18N
+            properties[PROPERTY_showing] = new PropertyDescriptor("showing", com.Dryft.gui.SignIn.class, "isShowing", null); // NOI18N
+            properties[PROPERTY_size] = new PropertyDescriptor("size", com.Dryft.gui.SignIn.class, "getSize", "setSize"); // NOI18N
+            properties[PROPERTY_state] = new PropertyDescriptor("state", com.Dryft.gui.SignIn.class, "getState", "setState"); // NOI18N
+            properties[PROPERTY_title] = new PropertyDescriptor("title", com.Dryft.gui.SignIn.class, "getTitle", "setTitle"); // NOI18N
+            properties[PROPERTY_toolkit] = new PropertyDescriptor("toolkit", com.Dryft.gui.SignIn.class, "getToolkit", null); // NOI18N
+            properties[PROPERTY_transferHandler] = new PropertyDescriptor("transferHandler", com.Dryft.gui.SignIn.class, "getTransferHandler", "setTransferHandler"); // NOI18N
+            properties[PROPERTY_treeLock] = new PropertyDescriptor("treeLock", com.Dryft.gui.SignIn.class, "getTreeLock", null); // NOI18N
+            properties[PROPERTY_type] = new PropertyDescriptor("type", com.Dryft.gui.SignIn.class, "getType", "setType"); // NOI18N
+            properties[PROPERTY_undecorated] = new PropertyDescriptor("undecorated", com.Dryft.gui.SignIn.class, "isUndecorated", "setUndecorated"); // NOI18N
+            properties[PROPERTY_valid] = new PropertyDescriptor("valid", com.Dryft.gui.SignIn.class, "isValid", null); // NOI18N
+            properties[PROPERTY_validateRoot] = new PropertyDescriptor("validateRoot", com.Dryft.gui.SignIn.class, "isValidateRoot", null); // NOI18N
+            properties[PROPERTY_visible] = new PropertyDescriptor("visible", com.Dryft.gui.SignIn.class, "isVisible", "setVisible"); // NOI18N
+            properties[PROPERTY_warningString] = new PropertyDescriptor("warningString", com.Dryft.gui.SignIn.class, "getWarningString", null); // NOI18N
+            properties[PROPERTY_width] = new PropertyDescriptor("width", com.Dryft.gui.SignIn.class, "getWidth", null); // NOI18N
+            properties[PROPERTY_windowFocusListeners] = new PropertyDescriptor("windowFocusListeners", com.Dryft.gui.SignIn.class, "getWindowFocusListeners", null); // NOI18N
+            properties[PROPERTY_windowListeners] = new PropertyDescriptor("windowListeners", com.Dryft.gui.SignIn.class, "getWindowListeners", null); // NOI18N
+            properties[PROPERTY_windowStateListeners] = new PropertyDescriptor("windowStateListeners", com.Dryft.gui.SignIn.class, "getWindowStateListeners", null); // NOI18N
+            properties[PROPERTY_x] = new PropertyDescriptor("x", com.Dryft.gui.SignIn.class, "getX", null); // NOI18N
+            properties[PROPERTY_y] = new PropertyDescriptor("y", com.Dryft.gui.SignIn.class, "getY", null); // NOI18N
+        } catch (IntrospectionException e) {
+            e.printStackTrace();
+        }//GEN-HEADEREND:Properties
+        // Here you can add code for customizing the properties array.
+
+        return properties;
+    }//GEN-LAST:Properties
+
+    // EventSet array
+    /*lazy EventSetDescriptor*/
+    private static EventSetDescriptor[] getEdescriptor() {
+        EventSetDescriptor[] eventSets = new EventSetDescriptor[14];
+
+        try {
+            eventSets[EVENT_componentListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "componentListener", java.awt.event.ComponentListener.class, new String[]{"componentResized", "componentMoved", "componentShown", "componentHidden"}, "addComponentListener", "removeComponentListener"); // NOI18N
+            eventSets[EVENT_containerListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "containerListener", java.awt.event.ContainerListener.class, new String[]{"componentAdded", "componentRemoved"}, "addContainerListener", "removeContainerListener"); // NOI18N
+            eventSets[EVENT_focusListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "focusListener", java.awt.event.FocusListener.class, new String[]{"focusGained", "focusLost"}, "addFocusListener", "removeFocusListener"); // NOI18N
+            eventSets[EVENT_hierarchyBoundsListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "hierarchyBoundsListener", java.awt.event.HierarchyBoundsListener.class, new String[]{"ancestorMoved", "ancestorResized"}, "addHierarchyBoundsListener", "removeHierarchyBoundsListener"); // NOI18N
+            eventSets[EVENT_hierarchyListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "hierarchyListener", java.awt.event.HierarchyListener.class, new String[]{"hierarchyChanged"}, "addHierarchyListener", "removeHierarchyListener"); // NOI18N
+            eventSets[EVENT_inputMethodListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "inputMethodListener", java.awt.event.InputMethodListener.class, new String[]{"inputMethodTextChanged", "caretPositionChanged"}, "addInputMethodListener", "removeInputMethodListener"); // NOI18N
+            eventSets[EVENT_keyListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "keyListener", java.awt.event.KeyListener.class, new String[]{"keyTyped", "keyPressed", "keyReleased"}, "addKeyListener", "removeKeyListener"); // NOI18N
+            eventSets[EVENT_mouseListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "mouseListener", java.awt.event.MouseListener.class, new String[]{"mouseClicked", "mousePressed", "mouseReleased", "mouseEntered", "mouseExited"}, "addMouseListener", "removeMouseListener"); // NOI18N
+            eventSets[EVENT_mouseMotionListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "mouseMotionListener", java.awt.event.MouseMotionListener.class, new String[]{"mouseDragged", "mouseMoved"}, "addMouseMotionListener", "removeMouseMotionListener"); // NOI18N
+            eventSets[EVENT_mouseWheelListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "mouseWheelListener", java.awt.event.MouseWheelListener.class, new String[]{"mouseWheelMoved"}, "addMouseWheelListener", "removeMouseWheelListener"); // NOI18N
+            eventSets[EVENT_propertyChangeListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "propertyChangeListener", java.beans.PropertyChangeListener.class, new String[]{"propertyChange"}, "addPropertyChangeListener", "removePropertyChangeListener"); // NOI18N
+            eventSets[EVENT_windowFocusListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "windowFocusListener", java.awt.event.WindowFocusListener.class, new String[]{"windowGainedFocus", "windowLostFocus"}, "addWindowFocusListener", "removeWindowFocusListener"); // NOI18N
+            eventSets[EVENT_windowListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "windowListener", java.awt.event.WindowListener.class, new String[]{"windowOpened", "windowClosing", "windowClosed", "windowIconified", "windowDeiconified", "windowActivated", "windowDeactivated"}, "addWindowListener", "removeWindowListener"); // NOI18N
+            eventSets[EVENT_windowStateListener] = new EventSetDescriptor(com.Dryft.gui.SignIn.class, "windowStateListener", java.awt.event.WindowStateListener.class, new String[]{"windowStateChanged"}, "addWindowStateListener", "removeWindowStateListener"); // NOI18N
+        } catch (IntrospectionException e) {
+            e.printStackTrace();
+        }//GEN-HEADEREND:Events
+        // Here you can add code for customizing the event sets array.
+
+        return eventSets;
+    }//GEN-LAST:Events
+
+    // Method array
+    /*lazy MethodDescriptor*/
+    private static MethodDescriptor[] getMdescriptor() {
+        MethodDescriptor[] methods = new MethodDescriptor[134];
+
+        try {
+            methods[METHOD_action0] = new MethodDescriptor(java.awt.Component.class.getMethod("action", java.awt.Event.class, Object.class)); // NOI18N
+            methods[METHOD_action0].setDisplayName("");
+            methods[METHOD_add1] = new MethodDescriptor(java.awt.Component.class.getMethod("add", java.awt.PopupMenu.class)); // NOI18N
+            methods[METHOD_add1].setDisplayName("");
+            methods[METHOD_add2] = new MethodDescriptor(java.awt.Container.class.getMethod("add", java.awt.Component.class)); // NOI18N
+            methods[METHOD_add2].setDisplayName("");
+            methods[METHOD_add3] = new MethodDescriptor(java.awt.Container.class.getMethod("add", String.class, java.awt.Component.class)); // NOI18N
+            methods[METHOD_add3].setDisplayName("");
+            methods[METHOD_add4] = new MethodDescriptor(java.awt.Container.class.getMethod("add", java.awt.Component.class, int.class)); // NOI18N
+            methods[METHOD_add4].setDisplayName("");
+            methods[METHOD_add5] = new MethodDescriptor(java.awt.Container.class.getMethod("add", java.awt.Component.class, Object.class)); // NOI18N
+            methods[METHOD_add5].setDisplayName("");
+            methods[METHOD_add6] = new MethodDescriptor(java.awt.Container.class.getMethod("add", java.awt.Component.class, Object.class, int.class)); // NOI18N
+            methods[METHOD_add6].setDisplayName("");
+            methods[METHOD_addNotify7] = new MethodDescriptor(java.awt.Frame.class.getMethod("addNotify")); // NOI18N
+            methods[METHOD_addNotify7].setDisplayName("");
+            methods[METHOD_addPropertyChangeListener8] = new MethodDescriptor(java.awt.Window.class.getMethod("addPropertyChangeListener", String.class, PropertyChangeListener.class)); // NOI18N
+            methods[METHOD_addPropertyChangeListener8].setDisplayName("");
+            methods[METHOD_applyComponentOrientation9] = new MethodDescriptor(java.awt.Container.class.getMethod("applyComponentOrientation", java.awt.ComponentOrientation.class)); // NOI18N
+            methods[METHOD_applyComponentOrientation9].setDisplayName("");
+            methods[METHOD_applyResourceBundle10] = new MethodDescriptor(java.awt.Window.class.getMethod("applyResourceBundle", java.util.ResourceBundle.class)); // NOI18N
+            methods[METHOD_applyResourceBundle10].setDisplayName("");
+            methods[METHOD_applyResourceBundle11] = new MethodDescriptor(java.awt.Window.class.getMethod("applyResourceBundle", String.class)); // NOI18N
+            methods[METHOD_applyResourceBundle11].setDisplayName("");
+            methods[METHOD_areFocusTraversalKeysSet12] = new MethodDescriptor(java.awt.Container.class.getMethod("areFocusTraversalKeysSet", int.class)); // NOI18N
+            methods[METHOD_areFocusTraversalKeysSet12].setDisplayName("");
+            methods[METHOD_bounds13] = new MethodDescriptor(java.awt.Component.class.getMethod("bounds")); // NOI18N
+            methods[METHOD_bounds13].setDisplayName("");
+            methods[METHOD_checkImage14] = new MethodDescriptor(java.awt.Component.class.getMethod("checkImage", java.awt.Image.class, java.awt.image.ImageObserver.class)); // NOI18N
+            methods[METHOD_checkImage14].setDisplayName("");
+            methods[METHOD_checkImage15] = new MethodDescriptor(java.awt.Component.class.getMethod("checkImage", java.awt.Image.class, int.class, int.class, java.awt.image.ImageObserver.class)); // NOI18N
+            methods[METHOD_checkImage15].setDisplayName("");
+            methods[METHOD_contains16] = new MethodDescriptor(java.awt.Component.class.getMethod("contains", int.class, int.class)); // NOI18N
+            methods[METHOD_contains16].setDisplayName("");
+            methods[METHOD_contains17] = new MethodDescriptor(java.awt.Component.class.getMethod("contains", java.awt.Point.class)); // NOI18N
+            methods[METHOD_contains17].setDisplayName("");
+            methods[METHOD_countComponents18] = new MethodDescriptor(java.awt.Container.class.getMethod("countComponents")); // NOI18N
+            methods[METHOD_countComponents18].setDisplayName("");
+            methods[METHOD_createBufferStrategy19] = new MethodDescriptor(java.awt.Window.class.getMethod("createBufferStrategy", int.class)); // NOI18N
+            methods[METHOD_createBufferStrategy19].setDisplayName("");
+            methods[METHOD_createBufferStrategy20] = new MethodDescriptor(java.awt.Window.class.getMethod("createBufferStrategy", int.class, java.awt.BufferCapabilities.class)); // NOI18N
+            methods[METHOD_createBufferStrategy20].setDisplayName("");
+            methods[METHOD_createImage21] = new MethodDescriptor(java.awt.Component.class.getMethod("createImage", java.awt.image.ImageProducer.class)); // NOI18N
+            methods[METHOD_createImage21].setDisplayName("");
+            methods[METHOD_createImage22] = new MethodDescriptor(java.awt.Component.class.getMethod("createImage", int.class, int.class)); // NOI18N
+            methods[METHOD_createImage22].setDisplayName("");
+            methods[METHOD_createVolatileImage23] = new MethodDescriptor(java.awt.Component.class.getMethod("createVolatileImage", int.class, int.class)); // NOI18N
+            methods[METHOD_createVolatileImage23].setDisplayName("");
+            methods[METHOD_createVolatileImage24] = new MethodDescriptor(java.awt.Component.class.getMethod("createVolatileImage", int.class, int.class, java.awt.ImageCapabilities.class)); // NOI18N
+            methods[METHOD_createVolatileImage24].setDisplayName("");
+            methods[METHOD_deliverEvent25] = new MethodDescriptor(java.awt.Container.class.getMethod("deliverEvent", java.awt.Event.class)); // NOI18N
+            methods[METHOD_deliverEvent25].setDisplayName("");
+            methods[METHOD_disable26] = new MethodDescriptor(java.awt.Component.class.getMethod("disable")); // NOI18N
+            methods[METHOD_disable26].setDisplayName("");
+            methods[METHOD_dispatchEvent27] = new MethodDescriptor(java.awt.Component.class.getMethod("dispatchEvent", java.awt.AWTEvent.class)); // NOI18N
+            methods[METHOD_dispatchEvent27].setDisplayName("");
+            methods[METHOD_dispose28] = new MethodDescriptor(java.awt.Window.class.getMethod("dispose")); // NOI18N
+            methods[METHOD_dispose28].setDisplayName("");
+            methods[METHOD_doLayout29] = new MethodDescriptor(java.awt.Container.class.getMethod("doLayout")); // NOI18N
+            methods[METHOD_doLayout29].setDisplayName("");
+            methods[METHOD_enable30] = new MethodDescriptor(java.awt.Component.class.getMethod("enable")); // NOI18N
+            methods[METHOD_enable30].setDisplayName("");
+            methods[METHOD_enable31] = new MethodDescriptor(java.awt.Component.class.getMethod("enable", boolean.class)); // NOI18N
+            methods[METHOD_enable31].setDisplayName("");
+            methods[METHOD_enableInputMethods32] = new MethodDescriptor(java.awt.Component.class.getMethod("enableInputMethods", boolean.class)); // NOI18N
+            methods[METHOD_enableInputMethods32].setDisplayName("");
+            methods[METHOD_findComponentAt33] = new MethodDescriptor(java.awt.Container.class.getMethod("findComponentAt", int.class, int.class)); // NOI18N
+            methods[METHOD_findComponentAt33].setDisplayName("");
+            methods[METHOD_findComponentAt34] = new MethodDescriptor(java.awt.Container.class.getMethod("findComponentAt", java.awt.Point.class)); // NOI18N
+            methods[METHOD_findComponentAt34].setDisplayName("");
+            methods[METHOD_firePropertyChange35] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", String.class, byte.class, byte.class)); // NOI18N
+            methods[METHOD_firePropertyChange35].setDisplayName("");
+            methods[METHOD_firePropertyChange36] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", String.class, char.class, char.class)); // NOI18N
+            methods[METHOD_firePropertyChange36].setDisplayName("");
+            methods[METHOD_firePropertyChange37] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", String.class, short.class, short.class)); // NOI18N
+            methods[METHOD_firePropertyChange37].setDisplayName("");
+            methods[METHOD_firePropertyChange38] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", String.class, long.class, long.class)); // NOI18N
+            methods[METHOD_firePropertyChange38].setDisplayName("");
+            methods[METHOD_firePropertyChange39] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", String.class, float.class, float.class)); // NOI18N
+            methods[METHOD_firePropertyChange39].setDisplayName("");
+            methods[METHOD_firePropertyChange40] = new MethodDescriptor(java.awt.Component.class.getMethod("firePropertyChange", String.class, double.class, double.class)); // NOI18N
+            methods[METHOD_firePropertyChange40].setDisplayName("");
+            methods[METHOD_getBaseline41] = new MethodDescriptor(java.awt.Component.class.getMethod("getBaseline", int.class, int.class)); // NOI18N
+            methods[METHOD_getBaseline41].setDisplayName("");
+            methods[METHOD_getBounds42] = new MethodDescriptor(java.awt.Component.class.getMethod("getBounds", java.awt.Rectangle.class)); // NOI18N
+            methods[METHOD_getBounds42].setDisplayName("");
+            methods[METHOD_getComponentAt43] = new MethodDescriptor(java.awt.Container.class.getMethod("getComponentAt", int.class, int.class)); // NOI18N
+            methods[METHOD_getComponentAt43].setDisplayName("");
+            methods[METHOD_getComponentAt44] = new MethodDescriptor(java.awt.Container.class.getMethod("getComponentAt", java.awt.Point.class)); // NOI18N
+            methods[METHOD_getComponentAt44].setDisplayName("");
+            methods[METHOD_getComponentZOrder45] = new MethodDescriptor(java.awt.Container.class.getMethod("getComponentZOrder", java.awt.Component.class)); // NOI18N
+            methods[METHOD_getComponentZOrder45].setDisplayName("");
+            methods[METHOD_getCursor46] = new MethodDescriptor(java.awt.Component.class.getMethod("getCursor")); // NOI18N
+            methods[METHOD_getCursor46].setDisplayName("");
+            methods[METHOD_getFontMetrics47] = new MethodDescriptor(java.awt.Component.class.getMethod("getFontMetrics", java.awt.Font.class)); // NOI18N
+            methods[METHOD_getFontMetrics47].setDisplayName("");
+            methods[METHOD_getFrames48] = new MethodDescriptor(java.awt.Frame.class.getMethod("getFrames")); // NOI18N
+            methods[METHOD_getFrames48].setDisplayName("");
+            methods[METHOD_getIconImages49] = new MethodDescriptor(java.awt.Window.class.getMethod("getIconImages")); // NOI18N
+            methods[METHOD_getIconImages49].setDisplayName("");
+            methods[METHOD_getListeners50] = new MethodDescriptor(java.awt.Window.class.getMethod("getListeners", Class.class)); // NOI18N
+            methods[METHOD_getListeners50].setDisplayName("");
+            methods[METHOD_getLocation51] = new MethodDescriptor(java.awt.Component.class.getMethod("getLocation", java.awt.Point.class)); // NOI18N
+            methods[METHOD_getLocation51].setDisplayName("");
+            methods[METHOD_getMousePosition52] = new MethodDescriptor(java.awt.Container.class.getMethod("getMousePosition", boolean.class)); // NOI18N
+            methods[METHOD_getMousePosition52].setDisplayName("");
+            methods[METHOD_getOwnerlessWindows53] = new MethodDescriptor(java.awt.Window.class.getMethod("getOwnerlessWindows")); // NOI18N
+            methods[METHOD_getOwnerlessWindows53].setDisplayName("");
+            methods[METHOD_getPropertyChangeListeners54] = new MethodDescriptor(java.awt.Component.class.getMethod("getPropertyChangeListeners", String.class)); // NOI18N
+            methods[METHOD_getPropertyChangeListeners54].setDisplayName("");
+            methods[METHOD_getSize55] = new MethodDescriptor(java.awt.Component.class.getMethod("getSize", java.awt.Dimension.class)); // NOI18N
+            methods[METHOD_getSize55].setDisplayName("");
+            methods[METHOD_getWindows56] = new MethodDescriptor(java.awt.Window.class.getMethod("getWindows")); // NOI18N
+            methods[METHOD_getWindows56].setDisplayName("");
+            methods[METHOD_gotFocus57] = new MethodDescriptor(java.awt.Component.class.getMethod("gotFocus", java.awt.Event.class, Object.class)); // NOI18N
+            methods[METHOD_gotFocus57].setDisplayName("");
+            methods[METHOD_handleEvent58] = new MethodDescriptor(java.awt.Component.class.getMethod("handleEvent", java.awt.Event.class)); // NOI18N
+            methods[METHOD_handleEvent58].setDisplayName("");
+            methods[METHOD_hasFocus59] = new MethodDescriptor(java.awt.Component.class.getMethod("hasFocus")); // NOI18N
+            methods[METHOD_hasFocus59].setDisplayName("");
+            methods[METHOD_hide60] = new MethodDescriptor(java.awt.Window.class.getMethod("hide")); // NOI18N
+            methods[METHOD_hide60].setDisplayName("");
+            methods[METHOD_imageUpdate61] = new MethodDescriptor(java.awt.Component.class.getMethod("imageUpdate", java.awt.Image.class, int.class, int.class, int.class, int.class, int.class)); // NOI18N
+            methods[METHOD_imageUpdate61].setDisplayName("");
+            methods[METHOD_insets62] = new MethodDescriptor(java.awt.Container.class.getMethod("insets")); // NOI18N
+            methods[METHOD_insets62].setDisplayName("");
+            methods[METHOD_inside63] = new MethodDescriptor(java.awt.Component.class.getMethod("inside", int.class, int.class)); // NOI18N
+            methods[METHOD_inside63].setDisplayName("");
+            methods[METHOD_invalidate64] = new MethodDescriptor(java.awt.Container.class.getMethod("invalidate")); // NOI18N
+            methods[METHOD_invalidate64].setDisplayName("");
+            methods[METHOD_isAncestorOf65] = new MethodDescriptor(java.awt.Container.class.getMethod("isAncestorOf", java.awt.Component.class)); // NOI18N
+            methods[METHOD_isAncestorOf65].setDisplayName("");
+            methods[METHOD_isDefaultLookAndFeelDecorated66] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("isDefaultLookAndFeelDecorated")); // NOI18N
+            methods[METHOD_isDefaultLookAndFeelDecorated66].setDisplayName("");
+            methods[METHOD_isFocusCycleRoot67] = new MethodDescriptor(java.awt.Container.class.getMethod("isFocusCycleRoot", java.awt.Container.class)); // NOI18N
+            methods[METHOD_isFocusCycleRoot67].setDisplayName("");
+            methods[METHOD_isFocusOwner68] = new MethodDescriptor(java.awt.Component.class.getMethod("isFocusOwner")); // NOI18N
+            methods[METHOD_isFocusOwner68].setDisplayName("");
+            methods[METHOD_keyDown69] = new MethodDescriptor(java.awt.Component.class.getMethod("keyDown", java.awt.Event.class, int.class)); // NOI18N
+            methods[METHOD_keyDown69].setDisplayName("");
+            methods[METHOD_keyUp70] = new MethodDescriptor(java.awt.Component.class.getMethod("keyUp", java.awt.Event.class, int.class)); // NOI18N
+            methods[METHOD_keyUp70].setDisplayName("");
+            methods[METHOD_layout71] = new MethodDescriptor(java.awt.Container.class.getMethod("layout")); // NOI18N
+            methods[METHOD_layout71].setDisplayName("");
+            methods[METHOD_list72] = new MethodDescriptor(java.awt.Component.class.getMethod("list")); // NOI18N
+            methods[METHOD_list72].setDisplayName("");
+            methods[METHOD_list73] = new MethodDescriptor(java.awt.Component.class.getMethod("list", java.io.PrintStream.class)); // NOI18N
+            methods[METHOD_list73].setDisplayName("");
+            methods[METHOD_list74] = new MethodDescriptor(java.awt.Component.class.getMethod("list", java.io.PrintWriter.class)); // NOI18N
+            methods[METHOD_list74].setDisplayName("");
+            methods[METHOD_list75] = new MethodDescriptor(java.awt.Container.class.getMethod("list", java.io.PrintStream.class, int.class)); // NOI18N
+            methods[METHOD_list75].setDisplayName("");
+            methods[METHOD_list76] = new MethodDescriptor(java.awt.Container.class.getMethod("list", java.io.PrintWriter.class, int.class)); // NOI18N
+            methods[METHOD_list76].setDisplayName("");
+            methods[METHOD_locate77] = new MethodDescriptor(java.awt.Container.class.getMethod("locate", int.class, int.class)); // NOI18N
+            methods[METHOD_locate77].setDisplayName("");
+            methods[METHOD_location78] = new MethodDescriptor(java.awt.Component.class.getMethod("location")); // NOI18N
+            methods[METHOD_location78].setDisplayName("");
+            methods[METHOD_lostFocus79] = new MethodDescriptor(java.awt.Component.class.getMethod("lostFocus", java.awt.Event.class, Object.class)); // NOI18N
+            methods[METHOD_lostFocus79].setDisplayName("");
+            methods[METHOD_main80] = new MethodDescriptor(com.Dryft.gui.SignIn.class.getMethod("main", String[].class)); // NOI18N
+            methods[METHOD_main80].setDisplayName("");
+            methods[METHOD_minimumSize81] = new MethodDescriptor(java.awt.Container.class.getMethod("minimumSize")); // NOI18N
+            methods[METHOD_minimumSize81].setDisplayName("");
+            methods[METHOD_mouseDown82] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseDown", java.awt.Event.class, int.class, int.class)); // NOI18N
+            methods[METHOD_mouseDown82].setDisplayName("");
+            methods[METHOD_mouseDrag83] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseDrag", java.awt.Event.class, int.class, int.class)); // NOI18N
+            methods[METHOD_mouseDrag83].setDisplayName("");
+            methods[METHOD_mouseEnter84] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseEnter", java.awt.Event.class, int.class, int.class)); // NOI18N
+            methods[METHOD_mouseEnter84].setDisplayName("");
+            methods[METHOD_mouseExit85] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseExit", java.awt.Event.class, int.class, int.class)); // NOI18N
+            methods[METHOD_mouseExit85].setDisplayName("");
+            methods[METHOD_mouseMove86] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseMove", java.awt.Event.class, int.class, int.class)); // NOI18N
+            methods[METHOD_mouseMove86].setDisplayName("");
+            methods[METHOD_mouseUp87] = new MethodDescriptor(java.awt.Component.class.getMethod("mouseUp", java.awt.Event.class, int.class, int.class)); // NOI18N
+            methods[METHOD_mouseUp87].setDisplayName("");
+            methods[METHOD_move88] = new MethodDescriptor(java.awt.Component.class.getMethod("move", int.class, int.class)); // NOI18N
+            methods[METHOD_move88].setDisplayName("");
+            methods[METHOD_nextFocus89] = new MethodDescriptor(java.awt.Component.class.getMethod("nextFocus")); // NOI18N
+            methods[METHOD_nextFocus89].setDisplayName("");
+            methods[METHOD_pack90] = new MethodDescriptor(java.awt.Window.class.getMethod("pack")); // NOI18N
+            methods[METHOD_pack90].setDisplayName("");
+            methods[METHOD_paint91] = new MethodDescriptor(java.awt.Window.class.getMethod("paint", java.awt.Graphics.class)); // NOI18N
+            methods[METHOD_paint91].setDisplayName("");
+            methods[METHOD_paintAll92] = new MethodDescriptor(java.awt.Component.class.getMethod("paintAll", java.awt.Graphics.class)); // NOI18N
+            methods[METHOD_paintAll92].setDisplayName("");
+            methods[METHOD_paintComponents93] = new MethodDescriptor(java.awt.Container.class.getMethod("paintComponents", java.awt.Graphics.class)); // NOI18N
+            methods[METHOD_paintComponents93].setDisplayName("");
+            methods[METHOD_postEvent94] = new MethodDescriptor(java.awt.Window.class.getMethod("postEvent", java.awt.Event.class)); // NOI18N
+            methods[METHOD_postEvent94].setDisplayName("");
+            methods[METHOD_preferredSize95] = new MethodDescriptor(java.awt.Container.class.getMethod("preferredSize")); // NOI18N
+            methods[METHOD_preferredSize95].setDisplayName("");
+            methods[METHOD_prepareImage96] = new MethodDescriptor(java.awt.Component.class.getMethod("prepareImage", java.awt.Image.class, java.awt.image.ImageObserver.class)); // NOI18N
+            methods[METHOD_prepareImage96].setDisplayName("");
+            methods[METHOD_prepareImage97] = new MethodDescriptor(java.awt.Component.class.getMethod("prepareImage", java.awt.Image.class, int.class, int.class, java.awt.image.ImageObserver.class)); // NOI18N
+            methods[METHOD_prepareImage97].setDisplayName("");
+            methods[METHOD_print98] = new MethodDescriptor(java.awt.Container.class.getMethod("print", java.awt.Graphics.class)); // NOI18N
+            methods[METHOD_print98].setDisplayName("");
+            methods[METHOD_printAll99] = new MethodDescriptor(java.awt.Component.class.getMethod("printAll", java.awt.Graphics.class)); // NOI18N
+            methods[METHOD_printAll99].setDisplayName("");
+            methods[METHOD_printComponents100] = new MethodDescriptor(java.awt.Container.class.getMethod("printComponents", java.awt.Graphics.class)); // NOI18N
+            methods[METHOD_printComponents100].setDisplayName("");
+            methods[METHOD_remove101] = new MethodDescriptor(java.awt.Container.class.getMethod("remove", int.class)); // NOI18N
+            methods[METHOD_remove101].setDisplayName("");
+            methods[METHOD_remove102] = new MethodDescriptor(java.awt.Frame.class.getMethod("remove", java.awt.MenuComponent.class)); // NOI18N
+            methods[METHOD_remove102].setDisplayName("");
+            methods[METHOD_remove103] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("remove", java.awt.Component.class)); // NOI18N
+            methods[METHOD_remove103].setDisplayName("");
+            methods[METHOD_removeAll104] = new MethodDescriptor(java.awt.Container.class.getMethod("removeAll")); // NOI18N
+            methods[METHOD_removeAll104].setDisplayName("");
+            methods[METHOD_removeNotify105] = new MethodDescriptor(java.awt.Frame.class.getMethod("removeNotify")); // NOI18N
+            methods[METHOD_removeNotify105].setDisplayName("");
+            methods[METHOD_removePropertyChangeListener106] = new MethodDescriptor(java.awt.Component.class.getMethod("removePropertyChangeListener", String.class, PropertyChangeListener.class)); // NOI18N
+            methods[METHOD_removePropertyChangeListener106].setDisplayName("");
+            methods[METHOD_repaint107] = new MethodDescriptor(java.awt.Component.class.getMethod("repaint")); // NOI18N
+            methods[METHOD_repaint107].setDisplayName("");
+            methods[METHOD_repaint108] = new MethodDescriptor(java.awt.Component.class.getMethod("repaint", long.class)); // NOI18N
+            methods[METHOD_repaint108].setDisplayName("");
+            methods[METHOD_repaint109] = new MethodDescriptor(java.awt.Component.class.getMethod("repaint", int.class, int.class, int.class, int.class)); // NOI18N
+            methods[METHOD_repaint109].setDisplayName("");
+            methods[METHOD_repaint110] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("repaint", long.class, int.class, int.class, int.class, int.class)); // NOI18N
+            methods[METHOD_repaint110].setDisplayName("");
+            methods[METHOD_requestFocus111] = new MethodDescriptor(java.awt.Component.class.getMethod("requestFocus")); // NOI18N
+            methods[METHOD_requestFocus111].setDisplayName("");
+            methods[METHOD_requestFocusInWindow112] = new MethodDescriptor(java.awt.Component.class.getMethod("requestFocusInWindow")); // NOI18N
+            methods[METHOD_requestFocusInWindow112].setDisplayName("");
+            methods[METHOD_reshape113] = new MethodDescriptor(java.awt.Window.class.getMethod("reshape", int.class, int.class, int.class, int.class)); // NOI18N
+            methods[METHOD_reshape113].setDisplayName("");
+            methods[METHOD_resize114] = new MethodDescriptor(java.awt.Component.class.getMethod("resize", int.class, int.class)); // NOI18N
+            methods[METHOD_resize114].setDisplayName("");
+            methods[METHOD_resize115] = new MethodDescriptor(java.awt.Component.class.getMethod("resize", java.awt.Dimension.class)); // NOI18N
+            methods[METHOD_resize115].setDisplayName("");
+            methods[METHOD_revalidate116] = new MethodDescriptor(java.awt.Component.class.getMethod("revalidate")); // NOI18N
+            methods[METHOD_revalidate116].setDisplayName("");
+            methods[METHOD_setBounds117] = new MethodDescriptor(java.awt.Window.class.getMethod("setBounds", int.class, int.class, int.class, int.class)); // NOI18N
+            methods[METHOD_setBounds117].setDisplayName("");
+            methods[METHOD_setComponentZOrder118] = new MethodDescriptor(java.awt.Container.class.getMethod("setComponentZOrder", java.awt.Component.class, int.class)); // NOI18N
+            methods[METHOD_setComponentZOrder118].setDisplayName("");
+            methods[METHOD_setCursor119] = new MethodDescriptor(java.awt.Window.class.getMethod("setCursor", java.awt.Cursor.class)); // NOI18N
+            methods[METHOD_setCursor119].setDisplayName("");
+            methods[METHOD_setDefaultLookAndFeelDecorated120] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("setDefaultLookAndFeelDecorated", boolean.class)); // NOI18N
+            methods[METHOD_setDefaultLookAndFeelDecorated120].setDisplayName("");
+            methods[METHOD_setFocusTraversalKeys121] = new MethodDescriptor(java.awt.Container.class.getMethod("setFocusTraversalKeys", int.class, java.util.Set.class)); // NOI18N
+            methods[METHOD_setFocusTraversalKeys121].setDisplayName("");
+            methods[METHOD_show122] = new MethodDescriptor(java.awt.Component.class.getMethod("show", boolean.class)); // NOI18N
+            methods[METHOD_show122].setDisplayName("");
+            methods[METHOD_show123] = new MethodDescriptor(java.awt.Window.class.getMethod("show")); // NOI18N
+            methods[METHOD_show123].setDisplayName("");
+            methods[METHOD_size124] = new MethodDescriptor(java.awt.Component.class.getMethod("size")); // NOI18N
+            methods[METHOD_size124].setDisplayName("");
+            methods[METHOD_toBack125] = new MethodDescriptor(java.awt.Window.class.getMethod("toBack")); // NOI18N
+            methods[METHOD_toBack125].setDisplayName("");
+            methods[METHOD_toFront126] = new MethodDescriptor(java.awt.Window.class.getMethod("toFront")); // NOI18N
+            methods[METHOD_toFront126].setDisplayName("");
+            methods[METHOD_toString127] = new MethodDescriptor(java.awt.Component.class.getMethod("toString")); // NOI18N
+            methods[METHOD_toString127].setDisplayName("");
+            methods[METHOD_transferFocus128] = new MethodDescriptor(java.awt.Component.class.getMethod("transferFocus")); // NOI18N
+            methods[METHOD_transferFocus128].setDisplayName("");
+            methods[METHOD_transferFocusBackward129] = new MethodDescriptor(java.awt.Component.class.getMethod("transferFocusBackward")); // NOI18N
+            methods[METHOD_transferFocusBackward129].setDisplayName("");
+            methods[METHOD_transferFocusDownCycle130] = new MethodDescriptor(java.awt.Container.class.getMethod("transferFocusDownCycle")); // NOI18N
+            methods[METHOD_transferFocusDownCycle130].setDisplayName("");
+            methods[METHOD_transferFocusUpCycle131] = new MethodDescriptor(java.awt.Component.class.getMethod("transferFocusUpCycle")); // NOI18N
+            methods[METHOD_transferFocusUpCycle131].setDisplayName("");
+            methods[METHOD_update132] = new MethodDescriptor(javax.swing.JFrame.class.getMethod("update", java.awt.Graphics.class)); // NOI18N
+            methods[METHOD_update132].setDisplayName("");
+            methods[METHOD_validate133] = new MethodDescriptor(java.awt.Container.class.getMethod("validate")); // NOI18N
+            methods[METHOD_validate133].setDisplayName("");
+        } catch (Exception e) {
+        }//GEN-HEADEREND:Methods
+        // Here you can add code for customizing the methods array.
+
+        return methods;
+    }//GEN-LAST:Methods
 
 //GEN-FIRST:Superclass
     // Here you can add code for customizing the Superclass BeanInfo.
 //GEN-LAST:Superclass
+
     /**
      * Gets the bean's <code>BeanDescriptor</code>s.
      *
@@ -800,7 +798,7 @@ public class SignInBeanInfo extends SimpleBeanInfo {
      *
      * @return Index of default property in the PropertyDescriptor array
      * returned by getPropertyDescriptors.
-     * <P>
+     * <p>
      * Returns -1 if there is no default property.
      */
     @Override
@@ -814,7 +812,7 @@ public class SignInBeanInfo extends SimpleBeanInfo {
      *
      * @return Index of default event in the EventSetDescriptor array returned
      * by getEventSetDescriptors.
-     * <P>
+     * <p>
      * Returns -1 if there is no default event.
      */
     @Override
@@ -838,8 +836,8 @@ public class SignInBeanInfo extends SimpleBeanInfo {
      * rendered onto an existing background.
      *
      * @param iconKind The kind of icon requested. This should be one of the
-     * constant values ICON_COLOR_16x16, ICON_COLOR_32x32, ICON_MONO_16x16, or
-     * ICON_MONO_32x32.
+     *                 constant values ICON_COLOR_16x16, ICON_COLOR_32x32, ICON_MONO_16x16, or
+     *                 ICON_MONO_32x32.
      * @return An image object representing the requested icon. May return null
      * if no suitable icon is available.
      */

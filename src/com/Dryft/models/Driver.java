@@ -57,7 +57,7 @@ public class Driver {
     public double getRating() {
         return rating;
     }
-    
+
     public int getReviews() {
         return reviews;
     }

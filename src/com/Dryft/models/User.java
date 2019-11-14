@@ -1,12 +1,11 @@
 package com.Dryft.models;
 
-import com.Dryft.DAOs.UserDAO;
 import com.Dryft.DAOs.DriverDAO;
 import com.Dryft.DAOs.RideDAO;
+import com.Dryft.DAOs.UserDAO;
 import com.Dryft.exceptions.UserSideException;
 
 import java.sql.SQLException;
-import java.lang.Math;
 
 public class User {
 
@@ -61,7 +60,7 @@ public class User {
     }
 
     public Ride bookRide(Driver driver, Location source, Location destination) throws SQLException {
-        DriverDAO.checkDriverAvailibility(driver);
+        DriverDAO.checkDriverAvailability(driver);
         Ride ride = new Ride(source, destination, driver, this);
         if (balance < ride.getCost()) {
             throw new UserSideException(UserSideException.ErrorCode.BalanceNotEnough);

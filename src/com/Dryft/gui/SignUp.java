@@ -3,6 +3,7 @@ package com.Dryft.gui;
 import com.Dryft.DAOs.UserDAO;
 import com.Dryft.exceptions.UserSideException;
 import com.Dryft.models.User;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -17,7 +18,7 @@ public class SignUp extends JFrame {
     private final ButtonGroup buttonGroup = new ButtonGroup();
     private JPanel contentPane;
     private JTextField textField;
-//    private JTextField userField;
+    //    private JTextField userField;
     private JTextField mailField;
     private JPasswordField passwordField;
     private JPasswordField passwordField_1;
