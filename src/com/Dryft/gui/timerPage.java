@@ -26,7 +26,8 @@ public class timerPage extends javax.swing.JFrame {
     String driverName;
     Ride ride;
     int secondsPassed = 0;
-    int maxTime = 10;
+    int driverTime = 10;
+    int tripTime = 10;
     /**
      * Creates new form timerPage
      */
@@ -46,7 +47,8 @@ public class timerPage extends javax.swing.JFrame {
         this.driver = ride.getDriver();
         username = this.user.getFullname();
         driverName = ride.getDriver().getName();
-        maxTime = ride.getDuration();
+        tripTime = ride.getDuration();
+        driverTime = ride.getDriverTime();
         initComponents();
         start();
     }
@@ -151,7 +153,7 @@ public class timerPage extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosed
     
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        if (secondsPassed >= maxTime) {
+        if (secondsPassed >= tripTime) {
             quit();
         }
         JOptionPane.showMessageDialog(null, "You cannot close this window before your ride is over");
@@ -162,10 +164,16 @@ public class timerPage extends javax.swing.JFrame {
         @Override
         public void run() {
             secondsPassed++;
-            jTextField1.setText(Integer.toString(maxTime - secondsPassed));
-            if (secondsPassed >= maxTime) {
-                time.cancel();
-                quit();
+            if (secondsPassed >= driverTime) {
+                jLabel2.setText("You will reach your destination in ");
+                jTextField1.setText(Integer.toString(driverTime + tripTime - secondsPassed));
+                if (secondsPassed >= tripTime + driverTime) {
+                    time.cancel();
+                    quit();
+                }
+            } else {
+                jTextField1.setText(Integer.toString(driverTime - secondsPassed));
+                jLabel2.setText("Your driver will reach you in ");
             }
         }
     };
